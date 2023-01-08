@@ -8,7 +8,7 @@
       <link href="/2023/01/06/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
       <url>/2023/01/06/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
       
-        <content type="html"><![CDATA[<h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2>]]></content>
+        <content type="html"><![CDATA[<h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><h3 id="测试正则表达式"><a href="#测试正则表达式" class="headerlink" title="测试正则表达式"></a>测试正则表达式</h3><p><code>test()</code>正则对象方法，用于检测字符串是否符合该规则</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">regexObj.<span class="title function_">test</span>(str)</span><br><span class="line"><span class="comment">//用来检测str文本是否符合正则表达式规范</span></span><br></pre></td></tr></table></figure><h3 id="边界符"><a href="#边界符" class="headerlink" title="边界符"></a>边界符</h3><p>用来提示字符所处的位置，主要有两个字符</p><p><code>^</code>     表示匹配行首的文本(以谁开始)</p><p><code>$</code>     表示匹配行尾的文本(以谁结束)</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> rg = <span class="regexp">/abc/</span>;  <span class="comment">//正则表达式里面不需要加引号，不管是数字型还是字符串型</span></span><br><span class="line"><span class="comment">//  /abc/ 只要包含abc这个字符串返回的都是true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(rg.<span class="title function_">test</span>(<span class="string">&#x27;abcd&#x27;</span>));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(rg.<span class="title function_">test</span>(<span class="string">&#x27;aabcd&#x27;</span>));</span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/^abc/</span>;</span><br><span class="line"><span class="comment">// /^abc/必须以abc字符串开头</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(reg.<span class="title function_">test</span>(<span class="string">&#x27;abcd&#x27;</span>));  <span class="comment">//true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(reg.<span class="title function_">test</span>(<span class="string">&#x27;aabcd&#x27;</span>)); <span class="comment">//false</span></span><br><span class="line"><span class="keyword">let</span> reg1 = <span class="regexp">/^abc$/</span>;</span><br><span class="line"><span class="comment">// 精准匹配，要求必须是abc字符串才符合规范</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(reg1.<span class="title function_">test</span>(<span class="string">&#x27;abc&#x27;</span>));    <span class="comment">//true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(reg1.<span class="title function_">test</span>(<span class="string">&#x27;aabcd&#x27;</span>));  <span class="comment">//false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(reg1.<span class="title function_">test</span>(<span class="string">&#x27;abcabc&#x27;</span>))  <span class="comment">//false</span></span><br></pre></td></tr></table></figure><h3 id="字符类"><a href="#字符类" class="headerlink" title="字符类"></a>字符类</h3><p><code>[]</code>表示有一系列字符可供选择，只要匹配其中一个即可</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> rg = <span class="regexp">/[abc]/</span>;   <span class="comment">//只要包含a或b或c都返回true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(rg.<span class="title function_">test</span>(<span class="string">&#x27;andy&#x27;</span>));  <span class="comment">//true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(rg.<span class="title function_">test</span>(<span class="string">&#x27;boy&#x27;</span>));   <span class="comment">//true</span></span><br><span class="line"><span class="keyword">let</span> rg1 = <span class="regexp">/^[abc]$/</span>;<span class="comment">//三选一  只有是a或b或c这三个字母才返回true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(rg1.<span class="title function_">test</span>(<span class="string">&#x27;aa&#x27;</span>));   <span class="comment">//false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(rg1.<span class="title function_">test</span>(<span class="string">&#x27;b&#x27;</span>));    <span class="comment">//true</span></span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/^[a-z]$/</span>;<span class="comment">//26个英文字母任何一个字母都返回true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(reg.<span class="title function_">test</span>(<span class="string">&#x27;z&#x27;</span>));    <span class="comment">//true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(reg.<span class="title function_">test</span>(<span class="string">&#x27;a&#x27;</span>));    <span class="comment">//true</span></span><br></pre></td></tr></table></figure><p>如果&#x3D;&#x3D;中括号&#x3D;&#x3D;里面有^表示取反的意思</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> reg2 = <span class="regexp">/^[^a-zA-Z0-9_-]$/</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(reg2.<span class="title function_">test</span>(<span class="string">&#x27;a&#x27;</span>));   <span class="comment">//false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(reg2.<span class="title function_">test</span>(<span class="string">&#x27;!&#x27;</span>));   <span class="comment">//true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(reg2.<span class="title function_">test</span>(<span class="string">&#x27;-&#x27;</span>));   <span class="comment">//false</span></span><br></pre></td></tr></table></figure><h3 id="量词符"><a href="#量词符" class="headerlink" title="量词符"></a>量词符</h3><p>用来设定某个模式出现的次数</p><table><thead><tr><th align="center">符号</th><th align="center">说明</th></tr></thead><tbody><tr><td align="center">*</td><td align="center">相当于&gt;&#x3D;0 可以出现0次或多次</td></tr><tr><td align="center">+</td><td align="center">相当于&gt;&#x3D;1 可以出现1次或很多次</td></tr><tr><td align="center">？</td><td align="center">相当于 1||0</td></tr><tr><td align="center">{3 }</td><td align="center">就是出现3次</td></tr><tr><td align="center">{3，}</td><td align="center">大于等于3次</td></tr><tr><td align="center">{3,16}</td><td align="center">大于等于3 并且小于等于16</td></tr></tbody></table><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/^[a-zA-Z0-9_-]&#123;6,16&#125;$/</span>;</span><br><span class="line"><span class="comment">//用户只能输入英文字母 数字 下划线 短横线</span></span><br><span class="line"><span class="comment">//&#123;6,16&#125;中间不要有空格</span></span><br></pre></td></tr></table></figure><h3 id="预定义类"><a href="#预定义类" class="headerlink" title="预定义类"></a>预定义类</h3><p>预定义类指的是某些常见模式的简写方式</p><table><thead><tr><th>预定义类</th><th>说明</th></tr></thead><tbody><tr><td>\d</td><td>匹配0-9之间的&#x3D;&#x3D;任意一个&#x3D;&#x3D;数字，相当于[0-9]</td></tr><tr><td>\D</td><td>匹配所有0-9以外的字符</td></tr><tr><td>\w</td><td>匹配任意的字母、数字、下划线，相当于[A-Za-z0-9_-]</td></tr><tr><td>\W</td><td>匹配除所有字母、数字、下划线以外的字符</td></tr><tr><td>\s</td><td>匹配空格(包括换行符、制表符、空格)</td></tr><tr><td>\S</td><td>匹配非空格的字符</td></tr></tbody></table><h3 id="正则表达式参数"><a href="#正则表达式参数" class="headerlink" title="正则表达式参数"></a>正则表达式参数</h3><p><code>/表达式/[switch]</code></p><p>switch(也称为修饰符)按照什么样的模式来匹配，有三种值</p><ul><li>g：全局匹配</li><li>i：忽略大小写</li><li>gi：全局匹配+忽略大小写</li></ul><h3 id="replace替换"><a href="#replace替换" class="headerlink" title="replace替换"></a>replace替换</h3><p><code>replace()</code>方法可以实现替换字符串操作，用来替换的参数可以是一个字符串或者是一个正则表达式</p><p><code>stringObject.replace(regexp/substr,replacement)</code></p><ol><li>第一个参数：被替换的字符串或者正则表达式</li><li>第二个参数：替换为的字符串</li><li>返回值是一个替换完毕的新字符串</li></ol>]]></content>
       
       
       
@@ -94,28 +94,6 @@
     
     
     <entry>
-      <title>音乐</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title></title>
       <link href="/css/custom.css"/>
       <url>/css/custom.css</url>
@@ -149,9 +127,31 @@
     
     
     <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>电影</title>
       <link href="/movies/index.html"/>
       <url>/movies/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>音乐</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
