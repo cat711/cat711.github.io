@@ -1,14 +1,16 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>DOM总结 | Serendipity</title><meta name="author" content="cat711"><meta name="copyright" content="cat711"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta property="og:type" content="article">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>DOM总结 | Serendipity</title><meta name="author" content="cat711"><meta name="copyright" content="cat711"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="DOM知识总结DOM简介文档对象模型(简称DOM)，是W3C组织推荐的处理可扩展标记语言(HTML或XML)的标准&#x3D;&#x3D;编程接口&#x3D;&#x3D;，通过这些DOM接口可以改变网页的内容、结构、样式。 包括内容：  文档：一个页面就是一个文档，DOM中使用document表示 元素：页面中的&#x3D;&#x3D;所有标签&#x3D;&#x3D;都是元素，DOM中使用elem">
+<meta property="og:type" content="article">
 <meta property="og:title" content="DOM总结">
 <meta property="og:url" content="https://cat711.github.io/2023/01/11/DOM%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="Serendipity">
+<meta property="og:description" content="DOM知识总结DOM简介文档对象模型(简称DOM)，是W3C组织推荐的处理可扩展标记语言(HTML或XML)的标准&#x3D;&#x3D;编程接口&#x3D;&#x3D;，通过这些DOM接口可以改变网页的内容、结构、样式。 包括内容：  文档：一个页面就是一个文档，DOM中使用document表示 元素：页面中的&#x3D;&#x3D;所有标签&#x3D;&#x3D;都是元素，DOM中使用elem">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.fomal.cc/img/default_cover_8.webp">
+<meta property="og:image" content="https://source.fomal.cc/img/default_cover_45.webp">
 <meta property="article:published_time" content="2023-01-11T10:06:00.000Z">
-<meta property="article:modified_time" content="2023-01-11T10:11:23.681Z">
+<meta property="article:modified_time" content="2023-01-11T13:21:02.154Z">
 <meta property="article:author" content="cat711">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://source.fomal.cc/img/default_cover_8.webp"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://cat711.github.io/2023/01/11/DOM%E6%80%BB%E7%BB%93/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="https://source.fomal.cc/img/default_cover_45.webp"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://cat711.github.io/2023/01/11/DOM%E6%80%BB%E7%BB%93/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
   localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
@@ -49,8 +51,8 @@
   isPost: true,
   isHome: false,
   isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2023-01-11 18:11:23'
+  isToc: true,
+  postUpdate: '2023-01-11 21:21:02'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -139,7 +141,10 @@
       }
     }
     detectApple()
-    })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>const preloader = {
+    })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>const preloader = {
   endLoading: () => {
     document.body.style.overflow = 'auto';
     document.getElementById('loading-box').classList.add("loaded")
@@ -155,7 +160,480 @@ window.addEventListener('load',()=> { preloader.endLoading() })
 if (false) {
   document.addEventListener('pjax:send', () => { preloader.initLoading() })
   document.addEventListener('pjax:complete', () => { preloader.endLoading() })
-}</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://220678.oss-cn-qingdao.aliyuncs.com/v2-76df23342b95974991262b23dcc71b77_r.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://source.fomal.cc/img/default_cover_8.webp')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Serendipity</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">DOM总结</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-01-11T10:06:00.000Z" title="发表于 2023-01-11 18:06:00">2023-01-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-01-11T10:11:23.681Z" title="更新于 2023-01-11 18:11:23">2023-01-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">0</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="DOM总结"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://cat711.github.io">cat711</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://cat711.github.io/2023/01/11/DOM%E6%80%BB%E7%BB%93/">https://cat711.github.io/2023/01/11/DOM%E6%80%BB%E7%BB%93/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://cat711.github.io" target="_blank">Serendipity</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://source.fomal.cc/img/default_cover_8.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2023/01/06/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"><img class="next-cover" src="https://source.fomal.cc/img/default_cover_2.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">正则表达式</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://220678.oss-cn-qingdao.aliyuncs.com/v2-76df23342b95974991262b23dcc71b77_r.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">cat711</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/cat711"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/cat711" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2724891564@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/01/11/DOM%E6%80%BB%E7%BB%93/" title="DOM总结"><img src="https://source.fomal.cc/img/default_cover_8.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DOM总结"/></a><div class="content"><a class="title" href="/2023/01/11/DOM%E6%80%BB%E7%BB%93/" title="DOM总结">DOM总结</a><time datetime="2023-01-11T10:06:00.000Z" title="发表于 2023-01-11 18:06:00">2023-01-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/01/06/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="正则表达式"><img src="https://source.fomal.cc/img/default_cover_2.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="正则表达式"/></a><div class="content"><a class="title" href="/2023/01/06/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="正则表达式">正则表达式</a><time datetime="2023-01-06T11:00:00.000Z" title="发表于 2023-01-06 19:00:00">2023-01-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/01/01/4/" title="新年快乐"><img src="https://source.fomal.cc/img/default_cover_46.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="新年快乐"/></a><div class="content"><a class="title" href="/2023/01/01/4/" title="新年快乐">新年快乐</a><time datetime="2022-12-31T16:00:00.000Z" title="发表于 2023-01-01 00:00:00">2023-01-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/27/3/" title="搭建个人博客"><img src="https://source.fomal.cc/img/default_cover_2.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="搭建个人博客"/></a><div class="content"><a class="title" href="/2022/12/27/3/" title="搭建个人博客">搭建个人博客</a><time datetime="2022-12-27T03:00:00.000Z" title="发表于 2022-12-27 11:00:00">2022-12-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/27/2/" title="博客技术来源"><img src="https://source.fomal.cc/img/default_cover_2.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="博客技术来源"/></a><div class="content"><a class="title" href="/2022/12/27/2/" title="博客技术来源">博客技术来源</a><time datetime="2022-12-27T02:00:00.000Z" title="发表于 2022-12-27 10:00:00">2022-12-27</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 By cat711</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+}</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://220678.oss-cn-qingdao.aliyuncs.com/v2-76df23342b95974991262b23dcc71b77_r.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://source.fomal.cc/img/default_cover_45.webp')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Serendipity</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">DOM总结</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-01-11T10:06:00.000Z" title="发表于 2023-01-11 18:06:00">2023-01-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-01-11T13:21:02.154Z" title="更新于 2023-01-11 21:21:02">2023-01-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">5k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>19分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="DOM总结"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="DOM知识总结"><a href="#DOM知识总结" class="headerlink" title="DOM知识总结"></a>DOM知识总结</h2><h3 id="DOM简介"><a href="#DOM简介" class="headerlink" title="DOM简介"></a>DOM简介</h3><p>文档对象模型(简称DOM)，是W3C组织推荐的处理可扩展标记语言(HTML或XML)的标准&#x3D;&#x3D;编程接口&#x3D;&#x3D;，通过这些DOM接口可以改变网页的内容、结构、样式。</p>
+<p>包括内容：</p>
+<ul>
+<li>文档：一个页面就是一个文档，DOM中使用<strong>document</strong>表示</li>
+<li>元素：页面中的&#x3D;&#x3D;所有标签&#x3D;&#x3D;都是元素，DOM中使用<strong>element</strong>表示</li>
+<li>节点：页面中的所有内容都是节点(标签、属性、文本、注释等)，DOM中使用<strong>node</strong>表示</li>
+</ul>
+<p><strong>DOM把以上内容都看做是&#x3D;&#x3D;对象&#x3D;&#x3D;</strong></p>
+<h3 id="获取页面元素"><a href="#获取页面元素" class="headerlink" title="获取页面元素"></a>获取页面元素</h3><p>DOM在实际开发中主要用来操作元素</p>
+<p>获取页面中元素可以使用以下几种方式：</p>
+<h4 id="1-获取ID获取"><a href="#1-获取ID获取" class="headerlink" title="1. 获取ID获取"></a>1. 获取ID获取</h4><p><strong><code>getElementById()</code></strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;box&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">var</span> box = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;box&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(box);  <span class="comment">//获取的是box这个盒子</span></span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>文档是从上往下加载，所以script写到标签的下面</li>
+<li>get获得 element元素 by通过 采用驼峰命名法</li>
+<li>参数id是大小写敏感的字符串</li>
+<li>返回的是一个元素对象</li>
+<li><strong>console.dir()</strong> 打印我们返回的元素对象，更好的查看里面的属性和方法</li>
+</ul>
+<h4 id="2-根据标签名获取"><a href="#2-根据标签名获取" class="headerlink" title="2. 根据标签名获取"></a>2. 根据标签名获取</h4><p><strong><code>getElementByTagName()</code></strong></p>
+<ul>
+<li>可以返回带有指定标签的&#x3D;&#x3D;对象的集合&#x3D;&#x3D;，以&#x3D;&#x3D;伪数组&#x3D;&#x3D;的形式存储</li>
+<li>想要依次打印里面的元素对象可以采取数组遍历的方式</li>
+<li>如果页面中没有元素，返回的是空的伪数组的形式</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">var</span> lis = <span class="variable language_">document</span>.<span class="title function_">getElementByTagName</span>(<span class="string">&#x27;li&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(lis);</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(lis[<span class="number">0</span>]);</span></span><br><span class="line"><span class="language-javascript"><span class="comment">//依次打印元素    </span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i&lt;lis.<span class="property">length</span>; i++) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(lis[i]);</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript"><span class="comment">//element.getElementByTagName(&#x27;标签名&#x27;) 获得特定元素下的特定标签名的标签</span></span></span><br><span class="line"><span class="language-javascript"><span class="comment">//var ol = document.getElementByTagName(&#x27;ol&#x27;);</span></span></span><br><span class="line"><span class="language-javascript"><span class="comment">//console.log(ol[0].getElementByTagName(&#x27;li&#x27;));</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">var</span> ol = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;ol&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(ol.<span class="title function_">getElementByTagName</span>(<span class="string">&#x27;li&#x27;</span>));</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3-通过HTML5新增的方法获取"><a href="#3-通过HTML5新增的方法获取" class="headerlink" title="3. 通过HTML5新增的方法获取"></a>3. 通过HTML5新增的方法获取</h4><blockquote>
+<h5 id="1-getElementByClassName-“类名”"><a href="#1-getElementByClassName-“类名”" class="headerlink" title="1. getElementByClassName(“类名”)"></a>1. getElementByClassName(“类名”)</h5></blockquote>
+<p>根据&#x3D;&#x3D;类名&#x3D;&#x3D;返回元素对象集合</p>
+<blockquote>
+<h5 id="2-querySelector-“选择器”"><a href="#2-querySelector-“选择器”" class="headerlink" title="2. querySelector(“选择器”)"></a>2. querySelector(“选择器”)</h5></blockquote>
+<p>根据&#x3D;&#x3D;指定选择器&#x3D;&#x3D;返回&#x3D;&#x3D;一个&#x3D;&#x3D;元素对象</p>
+<p><strong>里面的选择器需要加符号  <code>.box</code>、<code>#nav</code></strong></p>
+<blockquote>
+<h5 id="3-querySelectorAll-“选择器”"><a href="#3-querySelectorAll-“选择器”" class="headerlink" title="3. querySelectorAll(“选择器”)"></a>3. querySelectorAll(“选择器”)</h5></blockquote>
+<p>根据&#x3D;&#x3D;指定选择器&#x3D;&#x3D;返回&#x3D;&#x3D;所有&#x3D;&#x3D;元素对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="keyword">var</span> boxs = <span class="variable language_">document</span>.<span class="title function_">getElementByClassName</span>(<span class="string">&#x27;box&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(boxs);</span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="keyword">var</span> firstBox = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.box&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(firstBox);</span><br><span class="line"><span class="keyword">var</span> nav = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;#nav&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(nav);</span><br><span class="line"><span class="keyword">var</span> li = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;li&#x27;</span>);</span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="keyword">var</span> allBox = <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;.box&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(allBox);</span><br><span class="line"><span class="keyword">var</span> lis = <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;li&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(lis);</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-特殊元素获取"><a href="#4-特殊元素获取" class="headerlink" title="4. 特殊元素获取"></a>4. 特殊元素获取</h4><ul>
+<li><p>获取body元素</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="property">body</span>  <span class="comment">//返回body元素</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取html元素</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="property">documentElement</span>  <span class="comment">//返回html对象元素</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>1. </p>
+<h3 id="元素操作"><a href="#元素操作" class="headerlink" title="元素操作"></a>元素操作</h3><p>DOM操作可以改变网页内容、结构和样式，可以利用DOM操作元素来改变元素里的内容、属性等</p>
+<h4 id="1-修改元素内容"><a href="#1-修改元素内容" class="headerlink" title="1. 修改元素内容"></a>1. 修改元素内容</h4><blockquote>
+<p>element.innerText</p>
+</blockquote>
+<p>从起始位置到终止位置的内容，但会去除html标签。同时空格和换行也会去掉</p>
+<blockquote>
+<p>element.innerHTML</p>
+</blockquote>
+<p>起始位置到终止位置的全部内容，包括html标签，同时保留空格和换行</p>
+<p>innerText与innerHTML区别：</p>
+<ul>
+<li>innerText不识别html标签(非标准)，innerHTML识别html标签(W3C标准)</li>
+<li>innerText去除空格和换行，innerHTML保留空格和换行</li>
+</ul>
+<h4 id="2-修改元素属性"><a href="#2-修改元素属性" class="headerlink" title="2. 修改元素属性"></a>2. 修改元素属性</h4><blockquote>
+<p>可以修改元素的属性，像元素的id、class、src、href、title等</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;divid&quot;</span> <span class="attr">class</span>=<span class="string">&quot;divclass&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;image/1.jpg&quot;</span><span class="attr">alt</span>=<span class="string">&quot;&quot;</span><span class="attr">title</span>=<span class="string">&quot;hello&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">   	    <span class="keyword">var</span> div = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;div&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">   	    <span class="keyword">var</span> img = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;img&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(div.<span class="property">id</span>);</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(div.<span class="property">className</span>);</span></span><br><span class="line"><span class="language-javascript">        div.<span class="property">id</span> = <span class="string">&quot;afterid&quot;</span>;</span></span><br><span class="line"><span class="language-javascript">        div.<span class="property">className</span> = <span class="string">&quot;afterclass&quot;</span>;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(div.<span class="property">id</span>);</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(div.<span class="property">className</span>);</span></span><br><span class="line"><span class="language-javascript">        img.<span class="property">src</span> = <span class="string">&#x27;image/2.jpg&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">        img.<span class="property">title</span> = <span class="string">&#x27;morning&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3-修改表单属性"><a href="#3-修改表单属性" class="headerlink" title="3. 修改表单属性"></a>3. 修改表单属性</h4><blockquote>
+<p>修改表单的<strong>type、value、checked、selected、disabled</strong>属性</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>= <span class="string">&quot;text&quot;</span><span class="attr">value</span>= <span class="string">&quot;请输入&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span>&gt;</span>提交<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="comment">//1.获取元素        </span></span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">var</span> input = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;input&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">var</span> button = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;button&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript"><span class="comment">//2.注册事件 处理程序</span></span></span><br><span class="line"><span class="language-javascript">        input.<span class="property">value</span> = <span class="string">&quot;after&quot;</span>;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(input.<span class="property">value</span>);</span></span><br><span class="line"><span class="language-javascript">        button.<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">            input.<span class="property">innerHTML</span> = <span class="string">&#x27;点击&#x27;</span></span></span><br><span class="line"><span class="language-javascript"><span class="comment">//value修改的是表单里面的值innerHTML修改的是普通盒子比如div标签里面的内容</span></span></span><br><span class="line"><span class="language-javascript">            input.<span class="property">value</span> = <span class="string">&#x27;被点击&#x27;</span>；</span></span><br><span class="line"><span class="language-javascript">            <span class="variable language_">this</span>.<span class="property">disabled</span> = <span class="literal">true</span>;</span></span><br><span class="line"><span class="language-javascript"><span class="comment">//如果想要某个表单被禁用 不能再点击 用disabled，当值为true时即表示禁用     </span></span></span><br><span class="line"><span class="language-javascript"><span class="comment">//this指向的是事件函数的调用者button            </span></span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="4-修改样式属性"><a href="#4-修改样式属性" class="headerlink" title="4. 修改样式属性"></a>4. 修改样式属性</h4><p>通过JS修改元素的大小、颜色、位置等样式</p>
+<blockquote>
+<h5 id="1-element-style行内样式操作"><a href="#1-element-style行内样式操作" class="headerlink" title="1. element.style行内样式操作"></a>1. element.style行内样式操作</h5></blockquote>
+<blockquote>
+<h5 id="2-element-className类名样式操作"><a href="#2-element-className类名样式操作" class="headerlink" title="2. element.className类名样式操作"></a>2. element.className类名样式操作</h5></blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">var</span> box = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.box&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">        div.<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="variable language_">this</span>.<span class="property">style</span>.<span class="property">backgroundColor</span> = <span class="string">&#x27;purple&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">            <span class="variable language_">this</span>.<span class="property">style</span>.<span class="property">width</span> = <span class="string">&#x27;250px&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">            <span class="variable language_">this</span>.<span class="property">className</span> = <span class="string">&#x27;box change&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript">        div.<span class="property">onblur</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="variable language_">this</span>.<span class="property">style</span>.<span class="property">display</span> = <span class="string">&#x27;none&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：JS修改style样式操作，产生的是行内样式，且样式采用驼峰命名法 ，适用于修改样式较少的情况下，当修改样式较多时，修改类名，并重新用CSS写修改样式(如果要保留原先的类名，可以采用多类型选择器的方法命名)</strong></p>
+<p><img src="https://220678.oss-cn-qingdao.aliyuncs.com/149.png"></p>
+<h4 id="5-自定义属性"><a href="#5-自定义属性" class="headerlink" title="5. 自定义属性"></a>5. 自定义属性</h4><p>自定义属性目的：是为了保存并使用数据。有些数据可以保存到页面中而不用保存到数据库中</p>
+<ul>
+<li>设置元素的属性值</li>
+</ul>
+<blockquote>
+<p>element.属性 &#x3D; ‘值’;<br>element.setAttribute(‘属性’, ‘值’)</p>
+</blockquote>
+<p>H5规定自定义属性打他-开头作为属性名并且赋值</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">data-index</span>=<span class="string">&quot;1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">element.setAttribute(&#x27;data-index&#x27;, 2);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>获取元素的属性值</li>
+</ul>
+<blockquote>
+<p>element.属性  &#x2F;&#x2F;获取属性值<br>element.getAttribute(‘属性’);</p>
+</blockquote>
+<p>区别：</p>
+<p>element.属性  获取&#x3D;&#x3D;内置属性值&#x3D;&#x3D;(元素本身自带的属性)</p>
+<p>element.getAttribute(‘属性’); 主要获得&#x3D;&#x3D;自定义的属性值&#x3D;&#x3D;(标准)程序员自己添加的，称为index</p>
+<ul>
+<li>removeAttribute移除自定义属性</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> div = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(div.<span class="property">id</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(div.<span class="title function_">getAttribute</span>(<span class="string">&#x27;id&#x27;</span>));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(div.<span class="title function_">getAttribute</span>(<span class="string">&#x27;index&#x27;</span>));</span><br><span class="line"><span class="comment">//设置元素值</span></span><br><span class="line"><span class="comment">//(1)element.属性=&#x27;值&#x27;</span></span><br><span class="line">div.<span class="property">id</span> = <span class="string">&#x27;test&#x27;</span>;</span><br><span class="line">div.<span class="property">className</span> = <span class="string">&#x27;navs&#x27;</span>;</span><br><span class="line"><span class="comment">//(2)element.setAttribute(&#x27;属性&#x27;, &#x27;值&#x27;);主要针对自定义属性</span></span><br><span class="line">div.<span class="title function_">setAttribute</span>(<span class="string">&#x27;index&#x27;</span>, <span class="number">2</span>);</span><br><span class="line">div.<span class="title function_">setAttribute</span>(<span class="string">&#x27;class&#x27;</span>, <span class="string">&#x27;footer&#x27;</span>);</span><br><span class="line"><span class="comment">//class写的就是class，不是className</span></span><br><span class="line">div.<span class="title function_">removeAttribute</span>(<span class="string">&#x27;index&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="节点操作"><a href="#节点操作" class="headerlink" title="节点操作"></a>节点操作</h3><h4 id="1-节点概述"><a href="#1-节点概述" class="headerlink" title="1.节点概述"></a>1.节点概述</h4><p>网页中所有内容都是节点（标签、属性、文本、注释等），在DOM中，节点使用node来表示。HTML DOM树中所有节点均可通过JavaScript进行访问，所有HTML元素（节点）均可被修改，也可以创建和删除</p>
+<h4 id="2-节点操作的原因"><a href="#2-节点操作的原因" class="headerlink" title="2. 节点操作的原因"></a>2. 节点操作的原因</h4><p>获取元素的方法，逻辑性不强，并且获取元素很繁琐。而利用节点层级关系，我们可以利用元素间的父子或兄弟关系更简单的获取，逻辑性更强，缺点就是兼容性稍差。</p>
+<h4 id="3-父子节点"><a href="#3-父子节点" class="headerlink" title="3. 父子节点"></a>3. 父子节点</h4><blockquote>
+<p><strong>1.Node.parentNode 获得Node节点的父节点</strong></p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.父节点 parentNode</span></span><br><span class="line"><span class="keyword">var</span> erweima = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.erweima&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> box = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.box&#x27;</span>);</span><br><span class="line"><span class="comment">//得到的是离元素最近的父级节点 如果找不到父节点就返回null</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(erweima.<span class="property">parentNode</span>);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>2.Node.childNodes[n] 获得Node节点的第n+1个子节点（因为下标从0开始）</strong></p>
+</blockquote>
+<ul>
+<li>firstChild 第一个节点 不管是文本节点还是元素节点</li>
+<li>firstElementChild 返回第一个&#x3D;&#x3D;子元素节点&#x3D;&#x3D;</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(ol.<span class="property">firstChild</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(ol.<span class="property">lastChild</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(ol.<span class="property">firstElementChild</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(ol.<span class="property">lastElementChild</span>);</span><br><span class="line"><span class="comment">//实际开发的写法 既没有兼容性问题又返回第一个子元素</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(ol.<span class="property">children</span>[<span class="number">0</span>]);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(ol.<span class="property">children</span>[ol.<span class="property">children</span>.<span class="property">length</span>-<span class="number">1</span>]);</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ul = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;ul&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> lis = ul.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;li&#x27;</span>);</span><br><span class="line"><span class="comment">//1.子节点 childNodes 所有的子节点 包含元素节点、文本节点</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(ul.<span class="property">childNodes</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(ul.<span class="property">childNodes</span>[<span class="number">0</span>].<span class="property">nodeType</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(ul.<span class="property">childNodes</span>[<span class="number">1</span>].<span class="property">nodeType</span>);</span><br><span class="line"><span class="comment">//2.children 获取所有的子元素节点 也是最常用的方式</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(ul.<span class="property">children</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-兄弟节点"><a href="#4-兄弟节点" class="headerlink" title="4. 兄弟节点"></a>4. 兄弟节点</h4><blockquote>
+<p><strong>1.node.previousElementSibling 获得当前元素的上一个兄弟节点</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>2.node.nextElementSibling 获得当前元素的下一个兄弟节点</strong></p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box1 = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.box1&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> box2 = box1.<span class="property">previousElementSibling</span>;</span><br><span class="line"><span class="keyword">var</span> box3 = box1.<span class="property">nextElementSibling</span>;</span><br></pre></td></tr></table></figure>
+
+<p>找不到则返回null，包含所有的节点</p>
+<h4 id="5-创建添加节点"><a href="#5-创建添加节点" class="headerlink" title="5. 创建添加节点"></a>5. 创建添加节点</h4><ol>
+<li>创建节点</li>
+</ol>
+<blockquote>
+<p><strong>document.createElement(‘nodeName’)创建一个nodename节点</strong></p>
+</blockquote>
+<ol start="2">
+<li>添加节点</li>
+</ol>
+<blockquote>
+<p><strong>1.Node.appendchild(child) 给父节点Node添加子节点child</strong></p>
+</blockquote>
+<p>添加到子节点列表&#x3D;&#x3D;末尾&#x3D;&#x3D;</p>
+<blockquote>
+<p><strong>2.Node.insertBefore(child，指定子节点) 给父节点的指定子节点之前添加一个子节点child</strong></p>
+</blockquote>
+<p>将一个节点添加到父节点的&#x3D;&#x3D;指定子节点前面&#x3D;&#x3D;</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> li = <span class="variable language_">document</span>.<span class="title function_">creatElement</span>(<span class="string">&#x27;li&#x27;</span>);  <span class="comment">// 创建新的节点元素</span></span><br><span class="line"><span class="keyword">var</span> ul = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;ul&#x27;</span>);</span><br><span class="line">ul.<span class="title function_">appendchild</span>(<span class="string">&#x27;li&#x27;</span>);    <span class="comment">//添加节点元素</span></span><br><span class="line"><span class="keyword">var</span> li2 = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;li&#x27;</span>);</span><br><span class="line">ul.<span class="title function_">insertBefore</span>(li2,ul.<span class="property">children</span>[<span class="number">0</span>]);</span><br></pre></td></tr></table></figure>
+
+<p><strong>想要页面添加一个新的元素：1. 创建元素 2. 添加元素</strong></p>
+<h4 id="6-删除节点"><a href="#6-删除节点" class="headerlink" title="6. 删除节点"></a>6. 删除节点</h4><blockquote>
+<p><strong>Node.removeChild(‘NodeName’) 删除父节点node的子节点</strong></p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ul = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;ul&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> btn = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;button&#x27;</span>);</span><br><span class="line">btn.<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(ul.<span class="property">children</span>.<span class="property">length</span> == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">disabled</span> = <span class="literal">true</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        ul.<span class="title function_">removeChild</span>(ul.<span class="property">children</span>[<span class="number">0</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-复制节点"><a href="#7-复制节点" class="headerlink" title="7. 复制节点"></a>7. 复制节点</h4><blockquote>
+<p><strong>Node.cloneNode(Boolean) 复制Node节点</strong></p>
+</blockquote>
+<p>如果括号里Boolean等于true，则为深拷贝(复制标签及里面的内容)，如果不填或者为false，则为浅拷贝(只复制标签不复制里面的内容)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.box&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> copy = box.<span class="title function_">cloneNode</span>();          <span class="comment">//默认：浅拷贝</span></span><br><span class="line"><span class="keyword">var</span> deep = box.<span class="title function_">cloneNode</span>(<span class="literal">true</span>);      <span class="comment">//深拷贝</span></span><br><span class="line"><span class="keyword">var</span> shallow = box.<span class="title function_">cloneNode</span>(<span class="literal">false</span>);  <span class="comment">//浅拷贝</span></span><br><span class="line"><span class="keyword">var</span> ul = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;ul&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> lili = ul.<span class="property">childreb</span>[<span class="number">0</span>].<span class="title function_">cloneNode</span>(<span class="literal">true</span>);</span><br><span class="line">ul.<span class="title function_">appendchild</span>(lili);</span><br></pre></td></tr></table></figure>
+
+<h4 id="8-动态创建元素"><a href="#8-动态创建元素" class="headerlink" title="8. 动态创建元素"></a>8. 动态创建元素</h4><ol>
+<li><p>document.write()</p>
+<p>直接将内容写入页面的内容流，<strong>但是文档流执行完毕，则它会导致页面全部重绘</strong></p>
+</li>
+<li><p>element.innerHTML</p>
+<p>将内容写入某个DOM节点，不会导致页面全部重绘</p>
+<p>创建多个元素效率更高(不要拼接字符串，采取数组形式拼接)，结构稍微复杂</p>
+</li>
+<li><p>document.createElement()</p>
+<p>创建多个元素效率稍低一点，但是结构更清晰</p>
+</li>
+</ol>
+<p><strong>总结：不同浏览器下，&#x3D;&#x3D;innerHTML效率要比createElement高&#x3D;&#x3D;</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.document.write()</span></span><br><span class="line"><span class="keyword">var</span> btn = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;button&#x27;</span>);</span><br><span class="line">btn.<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">write</span>(<span class="string">&#x27;&lt;div&gt;123&lt;/div&gt;&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//2.innerHTML</span></span><br><span class="line"><span class="keyword">var</span> inner = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.inner&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> arr = [];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt;= <span class="number">100</span>; i++) &#123;</span><br><span class="line">    arr.<span class="title function_">push</span>(<span class="string">&#x27;&lt;a href=&quot;#&quot;&gt;百度&lt;/a&gt;&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line">inner.<span class="property">innerHTML</span> = arr.<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line"><span class="comment">//3.document.createElement()</span></span><br><span class="line"><span class="keyword">var</span> create = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.create&#x27;</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt;= <span class="number">100</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="variable language_">document</span>.<span class="title function_">create</span>(<span class="string">&#x27;a&#x27;</span>);</span><br><span class="line">    create.<span class="title function_">appendchild</span>(a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="x3D-x3D-9-总结-x3D-x3D"><a href="#x3D-x3D-9-总结-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;9.总结&#x3D;&#x3D;"></a>&#x3D;&#x3D;9.总结&#x3D;&#x3D;</h4><table>
+<thead>
+<tr>
+<th align="center">操作</th>
+<th align="left">方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">创建</td>
+<td align="left">1. document.write<br/>2. innerHTML<br/>3. createElement</td>
+</tr>
+<tr>
+<td align="center">增</td>
+<td align="left">1. appendChild<br/>2. insertBefore</td>
+</tr>
+<tr>
+<td align="center">删</td>
+<td align="left">1.removeChild</td>
+</tr>
+<tr>
+<td align="center">改</td>
+<td align="left">主要修改dom的元素属性，dom元素的内容、属性，表单的值等<br>1. 修改元素属性：src、href、title等<br>2. 修改普通元素内容：innerHTML、innerText<br>3. 修改表单元素：value、type、disabled等<br>4. 修改元素样式：style、className</td>
+</tr>
+<tr>
+<td align="center">查</td>
+<td align="left">主要获取查询dom的元素<br>1. DOM提供的API方法：getElementByld、getElementsByTagName古老用法不太推荐<br>2. H5提供的新方法：querySelector、.querySelectorAll提倡<br>3. 利用节点操作获取元素：父(parentNode)、子(children)、兄(previousElementSibling、nextElementSibling)提倡</td>
+</tr>
+<tr>
+<td align="center">操作属性</td>
+<td align="left">主要针对于自定义属性<br>1. setAttribute:设置dom的属性值<br>2. getAttribute:得到dom的属性值<br>3. removeAttribute移除属性</td>
+</tr>
+</tbody></table>
+<h3 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h3><h4 id="1-事件基础"><a href="#1-事件基础" class="headerlink" title="1. 事件基础"></a>1. 事件基础</h4><ol>
+<li>事件的组成：事件源、事件类型、事件处理程序(也称事件三要素)</li>
+</ol>
+<ul>
+<li>事件源    事件被触发的对象</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> btn = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;btn&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>事件类型   如何触发 什么事件</li>
+<li>事件处理程序   通过一个函数赋值的方式完成</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">btn.<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">	<span class="title function_">alert</span>(<span class="string">&#x27;hello&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>执行事件的步骤</p>
+<ul>
+<li><p>获取事件源</p>
+</li>
+<li><p>注册事件(绑定事件)</p>
+</li>
+<li><p>添加事件处理程序(函数赋值)</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="2-事件高级"><a href="#2-事件高级" class="headerlink" title="2. 事件高级"></a>2. 事件高级</h4><h5 id="1-注册事件"><a href="#1-注册事件" class="headerlink" title="1. 注册事件"></a>1. 注册事件</h5><p>给元素添加事件，称为注册事件或者绑定事件，有两种方式：&#x3D;&#x3D;传统方式、方法监听注册方式&#x3D;&#x3D;</p>
+<h6 id="1-传统注册方式"><a href="#1-传统注册方式" class="headerlink" title="1. 传统注册方式"></a>1. 传统注册方式</h6><ul>
+<li>利用on开头的事件，如onclick</li>
+<li>可以行内添加，如<code>&lt;button onclick=&quot;alert(&#39;hello world&#39;)&quot;&gt;&lt;/button&gt;</code></li>
+<li>可以封装函数，如btn.onclick()&#x3D;function(){}</li>
+<li>特点：注册事件具有<strong>唯一性</strong>，同一个元素同一个事件只能设置一个处理函数，后注册的函数会覆盖前面注册的函数</li>
+</ul>
+<h6 id="2-方法监听注册方式"><a href="#2-方法监听注册方式" class="headerlink" title="2. 方法监听注册方式"></a>2. 方法监听注册方式</h6><ul>
+<li>W3C标准推荐方式</li>
+<li>通过 <strong>addEventListener(事件属性，事件处理，事件流)</strong> 方法实现</li>
+<li>IE9之前不支持此方法，可使用attachEvent()代替</li>
+<li>特点：同一个元素同一个事件可以注册多个监听器，它们按照注册的顺序依次执行</li>
+</ul>
+<blockquote>
+<p><strong>eventTarget.addEventListener(type, listener, useCapture)</strong></p>
+</blockquote>
+<p>type：事件类型字符串，比如click、mouseover，注意&#x3D;&#x3D;不带on&#x3D;&#x3D;</p>
+<p>listener：事件处理函数，事件反生是，会调研该监听函数</p>
+<p>useCapture：可选参数，是一个布尔值，默认是false。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> btns = <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;button&#x27;</span>);</span><br><span class="line"><span class="comment">//1. 传统方式注册事件</span></span><br><span class="line">btns[<span class="number">0</span>].<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&#x27;hi&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line">btns[<span class="number">0</span>].<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&#x27;hello&#x27;</span>);</span><br><span class="line">&#125;<span class="comment">//只会弹出hello</span></span><br><span class="line"><span class="comment">//2.事件监听注册事件</span></span><br><span class="line"><span class="comment">//(1)里面的事件类型是字符串 必须加引号 而且不带on</span></span><br><span class="line"><span class="comment">//(2)同一个元素 同一个事件可以添加多个监听器</span></span><br><span class="line">btn[<span class="number">1</span>].<span class="title function_">addEventlistener</span>(<span class="string">&#x27;click&#x27;</span>,<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="number">22</span>);</span><br><span class="line">&#125;)</span><br><span class="line">btn[<span class="number">1</span>].<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>,<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="number">33</span>);</span><br><span class="line">&#125;)</span><br><span class="line">btn[<span class="number">1</span>].<span class="title function_">addEvent</span>(<span class="string">&#x27;onclick&#x27;</span>,fn);</span><br><span class="line"><span class="comment">//这里的事件要加on 但函数不用加括号</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="number">44</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-删除事件"><a href="#2-删除事件" class="headerlink" title="2. 删除事件"></a>2. 删除事件</h5><blockquote>
+<p><strong>1.传统注册方式</strong><br>Event.οnclick&#x3D;null;</p>
+</blockquote>
+<blockquote>
+<p><strong>2.方法监听注册方式</strong><br>Event.removeEventListener(‘click’,fn);</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> divs = <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line">divs[<span class="number">0</span>].<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="number">11</span>);</span><br><span class="line">    divs[<span class="number">0</span>].<span class="property">onclick</span> = <span class="literal">null</span>;   <span class="comment">//传统方式删除事件</span></span><br><span class="line">&#125;</span><br><span class="line">div[<span class="number">1</span>].<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, fn)</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="number">22</span>);</span><br><span class="line">    divs[<span class="number">1</span>].<span class="title function_">removeEventListener</span>(<span class="string">&#x27;click&#x27;</span>,fn);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-DOM事件流"><a href="#3-DOM事件流" class="headerlink" title="3. DOM事件流"></a>3. DOM事件流</h5><p><strong>事件流</strong>描述的是从页面中接收事件的顺序</p>
+<p>事件发生时会在元素节点之间按照特定的顺序传播，这个传播过程即DOM事件流</p>
+<p>DOM事件流分为3个阶段：</p>
+<ol>
+<li>捕获阶段</li>
+<li>当前目标阶段</li>
+<li>冒泡阶段</li>
+</ol>
+<p>事件捕获：网景最早提出，由DOM&#x3D;&#x3D;最顶层节点开始&#x3D;&#x3D;，然后逐级向下传播到最具体的元素接收的过程</p>
+<p>事件冒泡：IE最早提出，事件开始时由最具体的元素接收，然后逐级向上传播到DOM最顶层节点的过程</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.JS代码中只能执行捕获或者冒泡其中的一个阶段</span></span><br><span class="line"><span class="comment">//2.onclick和attachEvent(ie)只能得到冒泡阶段</span></span><br><span class="line"><span class="comment">//3.捕获阶段 如果addEventlistener第三个参数是true 那么则处于捕获阶段 document-&gt;html-&gt;body-&gt;father-&gt;son</span></span><br><span class="line"><span class="keyword">var</span> son = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.son&#x27;</span>);</span><br><span class="line">son.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>,<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&#x27;son&#x27;</span>);</span><br><span class="line">&#125;,<span class="literal">true</span>);</span><br><span class="line"><span class="keyword">var</span> father = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.father&#x27;</span>);</span><br><span class="line">father.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&#x27;father&#x27;</span>);</span><br><span class="line">&#125;,<span class="literal">true</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>1. 在实际开发中很少使用事件捕获，更关注事件冒泡</strong></p>
+<p><strong>2.有些事件是没有冒泡的，比如onblur、onfocus、onmouseenter、onmouseleave</strong></p>
+<h5 id="4-事件对象"><a href="#4-事件对象" class="headerlink" title="4. 事件对象"></a>4. 事件对象</h5><ul>
+<li>event就是一个事件对象 写到监听函数的小括号里面 当形参来看</li>
+<li>事件对象只有有了事件才会存在，是系统自动创建的，不需要我们传递参数</li>
+<li>事件对象 是事件的一系列相关数据的集合，跟事件的状态，比如键盘按键状态、鼠标的位置、鼠标按钮的状态</li>
+</ul>
+<p>​       简单理解：事件发生后，<strong>跟事件相关的一系列信息数据的集合</strong>都放到这个对象里面，<strong>这个对象就是事件对象event</strong>，他有很多属性和方法</p>
+<ul>
+<li>这个事件对象也可以自己命名 比如event、e(最常用)</li>
+<li>事件对象也有兼容性问题  通过Windows.event兼容性的写法  e &#x3D; e|| window.event;</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> div = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.div&#x27;</span>);</span><br><span class="line">div.<span class="property">onclick</span> = <span class="title function_">finction</span>(<span class="params">e</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(e);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">window</span>.<span class="property">event</span>);</span><br><span class="line">    e = e || <span class="variable language_">window</span>.<span class="property">event</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//div.addEventListener(&#x27;click&#x27;. function(event) &#123;&#125;)</span></span><br><span class="line"><span class="comment">//div.onclick = function(event) &#123;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="center">事件对象属性方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">e.target</td>
+<td align="center">返回触发事件的对象   (标准)</td>
+</tr>
+<tr>
+<td align="center">e.srcElement</td>
+<td align="center">返回触发事件的对象   (非标准ie678使用)</td>
+</tr>
+<tr>
+<td align="center">e.type</td>
+<td align="center">返回事件的类型 比如click mouseover不带on</td>
+</tr>
+<tr>
+<td align="center">e.cancelBubble</td>
+<td align="center">该属性阻止冒泡   (非标准ie678使用)</td>
+</tr>
+<tr>
+<td align="center">e.returnValue</td>
+<td align="center">该属性阻止默认事件   (非标准)如不让链接跳转</td>
+</tr>
+<tr>
+<td align="center">e.preventDefault()</td>
+<td align="center">该属性阻止默认事件   (标准)如不让链接跳转</td>
+</tr>
+<tr>
+<td align="center">e.stopPropagation()</td>
+<td align="center">阻止冒泡   (标准)</td>
+</tr>
+</tbody></table>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. e.target 返回的是触发事件的对象||this返回的是绑定事件的对象</span></span><br><span class="line"><span class="comment">//区别：e.target点击了那个元素 就返回那个元素||this返回绑定事件的元素</span></span><br><span class="line"><span class="keyword">var</span> div = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.div&#x27;</span>);</span><br><span class="line">div.<span class="title function_">addEvebtListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="keyword">function</span>(<span class="params">e</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(e.<span class="property">target</span>);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">var</span> ul = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;ul&#x27;</span>);</span><br><span class="line">ul.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="keyword">function</span>(<span class="params">e</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(e.<span class="property">target</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>①阻止默认行为</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;a&#x27;</span>);</span><br><span class="line">a.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="keyword">function</span>(<span class="params">e</span>) &#123;</span><br><span class="line">    e.<span class="title function_">preventDefault</span>();  <span class="comment">//阻止默认行为</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>②阻止事件冒泡</p>
+<p>标准写法：利用事件对象里面的stopPropagation()方法</p>
+<blockquote>
+<p><strong>e.stopPropagation()</strong></p>
+</blockquote>
+<p>非标准写法：IE678利用事件对象cancelBubble属性</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> father = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.father&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> son = father.<span class="property">children</span>[<span class="number">0</span>];</span><br><span class="line">father.<span class="title function_">addElementListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&#x27;father&#x27;</span>);</span><br><span class="line">&#125;)</span><br><span class="line">son.<span class="title function_">addElementListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&#x27;son&#x27;</span>);</span><br><span class="line">    e.<span class="title function_">stopPropagation</span>();</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>③事件委托</p>
+<p>原理：不是每个子节点单独设置事件监听器，而是将事件监听器设置在其父节点上，然后利用冒泡原理影响设置每个子节点</p>
+<p>以上案例：给ul注册点击事件，然后利用事件对象的target来找到当前点击的Ii,因为点击Ii,事件会冒泡到ul上有注册事件，就会触发事件监听器</p>
+<p>作用：只操作了一次DOM，提高了程序的性能</p>
+<h5 id="5-常用鼠标事件"><a href="#5-常用鼠标事件" class="headerlink" title="5. 常用鼠标事件"></a>5. 常用鼠标事件</h5><table>
+<thead>
+<tr>
+<th align="center">鼠标事件</th>
+<th align="center">触发条件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">onclick</td>
+<td align="center">鼠标点击左键触发</td>
+</tr>
+<tr>
+<td align="center">onmouseover</td>
+<td align="center">鼠标经过触发</td>
+</tr>
+<tr>
+<td align="center">onmouseout</td>
+<td align="center">鼠标离开触发</td>
+</tr>
+<tr>
+<td align="center">onfocus</td>
+<td align="center">获得鼠标焦点触发</td>
+</tr>
+<tr>
+<td align="center">onblur</td>
+<td align="center">失去鼠标焦点触发</td>
+</tr>
+<tr>
+<td align="center">onmousemove</td>
+<td align="center">鼠标移动触发</td>
+</tr>
+<tr>
+<td align="center">onmouseup</td>
+<td align="center">鼠标弹起触发</td>
+</tr>
+<tr>
+<td align="center">onmousedown</td>
+<td align="center">鼠标按下触发</td>
+</tr>
+</tbody></table>
+<p><strong>&#x3D;&#x3D;使用监听注册时去掉前面 ‘on’&#x3D;&#x3D;</strong></p>
+<ol>
+<li>禁止鼠标右键菜单</li>
+</ol>
+<blockquote>
+<p>contextmenu主要控制应该何时显示上下文菜单，主要用于程序员取消默认的上下文菜单</p>
+<p>document.addEventListener(‘contextmenu’, function(e) {</p>
+<p>​	e.preventDefault();</p>
+<p>})</p>
+</blockquote>
+<ol start="2">
+<li>禁止鼠标选中</li>
+</ol>
+<blockquote>
+<p>document.addEventListener(‘selectstart’, function(e) {</p>
+<p>​	e.preventDefault();</p>
+<p>})</p>
+</blockquote>
+<ol start="3">
+<li>获得鼠标坐标</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">鼠标事件</th>
+<th align="center">触发条件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">e.clientX</td>
+<td align="center">返回浏览器相对于浏览器窗口可视区的X坐标</td>
+</tr>
+<tr>
+<td align="center">e.clientY</td>
+<td align="center">返回浏览器相对于浏览器窗口可视区的Y坐标</td>
+</tr>
+<tr>
+<td align="center">e.pageX</td>
+<td align="center">返回鼠标相对于文档页面的X坐标 (IE9+支持）</td>
+</tr>
+<tr>
+<td align="center">e.pageY</td>
+<td align="center">返回鼠标相对于文档页面的Y坐标 (IE9+支持）</td>
+</tr>
+<tr>
+<td align="center">e.screenX</td>
+<td align="center">返回鼠标相对于电脑屏幕的X坐标</td>
+</tr>
+<tr>
+<td align="center">e.screenY</td>
+<td align="center">返回鼠标相对于电脑屏幕的Y坐标</td>
+</tr>
+</tbody></table>
+<ol start="4">
+<li>常用键盘事件</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">键盘事件</th>
+<th align="center">触发条件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">onkeyup</td>
+<td align="center">某个键盘按键被松开时触发</td>
+</tr>
+<tr>
+<td align="center">onkeydown</td>
+<td align="center">某个键盘按键被按下时触发</td>
+</tr>
+<tr>
+<td align="center">onkeypress</td>
+<td align="center">某个键盘按键被按下时触发 <strong>但是它不识别功能键 ctrl shift等</strong></td>
+</tr>
+</tbody></table>
+<p><strong>当按下一个按键再松开时，三个事件的执行顺序依次为：<br>onkeydown -&gt;onkeypress-&gt;onkeyup</strong></p>
+<p><strong>&#x3D;&#x3D;使用监听注册时去掉前面 ‘on’&#x3D;&#x3D;</strong></p>
+<p>键盘事件对象属性：keyCode</p>
+<p>说明：返回该键的ASCII值</p>
+<p>注意：</p>
+<ol>
+<li>keyup和keydown事件不区分字母大小写，如a和A得到的都是65</li>
+<li>keypress事件区分字母大小写</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://cat711.github.io">cat711</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://cat711.github.io/2023/01/11/DOM%E6%80%BB%E7%BB%93/">https://cat711.github.io/2023/01/11/DOM%E6%80%BB%E7%BB%93/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://cat711.github.io" target="_blank">Serendipity</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://source.fomal.cc/img/default_cover_45.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/01/12/BOM%E6%80%BB%E7%BB%93/"><img class="prev-cover" src="https://source.fomal.cc/img/default_cover_45.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">BOM总结</div></div></a></div><div class="next-post pull-right"><a href="/2023/01/06/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"><img class="next-cover" src="https://source.fomal.cc/img/default_cover_2.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">正则表达式</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#DOM%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93"><span class="toc-text">DOM知识总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#DOM%E7%AE%80%E4%BB%8B"><span class="toc-text">DOM简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0"><span class="toc-text">获取页面元素</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E8%8E%B7%E5%8F%96ID%E8%8E%B7%E5%8F%96"><span class="toc-text">1. 获取ID获取</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E6%A0%B9%E6%8D%AE%E6%A0%87%E7%AD%BE%E5%90%8D%E8%8E%B7%E5%8F%96"><span class="toc-text">2. 根据标签名获取</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E9%80%9A%E8%BF%87HTML5%E6%96%B0%E5%A2%9E%E7%9A%84%E6%96%B9%E6%B3%95%E8%8E%B7%E5%8F%96"><span class="toc-text">3. 通过HTML5新增的方法获取</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-getElementByClassName-%E2%80%9C%E7%B1%BB%E5%90%8D%E2%80%9D"><span class="toc-text">1. getElementByClassName(“类名”)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-querySelector-%E2%80%9C%E9%80%89%E6%8B%A9%E5%99%A8%E2%80%9D"><span class="toc-text">2. querySelector(“选择器”)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-querySelectorAll-%E2%80%9C%E9%80%89%E6%8B%A9%E5%99%A8%E2%80%9D"><span class="toc-text">3. querySelectorAll(“选择器”)</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E7%89%B9%E6%AE%8A%E5%85%83%E7%B4%A0%E8%8E%B7%E5%8F%96"><span class="toc-text">4. 特殊元素获取</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E6%93%8D%E4%BD%9C"><span class="toc-text">元素操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%BF%AE%E6%94%B9%E5%85%83%E7%B4%A0%E5%86%85%E5%AE%B9"><span class="toc-text">1. 修改元素内容</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E4%BF%AE%E6%94%B9%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7"><span class="toc-text">2. 修改元素属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E4%BF%AE%E6%94%B9%E8%A1%A8%E5%8D%95%E5%B1%9E%E6%80%A7"><span class="toc-text">3. 修改表单属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E4%BF%AE%E6%94%B9%E6%A0%B7%E5%BC%8F%E5%B1%9E%E6%80%A7"><span class="toc-text">4. 修改样式属性</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-element-style%E8%A1%8C%E5%86%85%E6%A0%B7%E5%BC%8F%E6%93%8D%E4%BD%9C"><span class="toc-text">1. element.style行内样式操作</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-element-className%E7%B1%BB%E5%90%8D%E6%A0%B7%E5%BC%8F%E6%93%8D%E4%BD%9C"><span class="toc-text">2. element.className类名样式操作</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7"><span class="toc-text">5. 自定义属性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C"><span class="toc-text">节点操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E8%8A%82%E7%82%B9%E6%A6%82%E8%BF%B0"><span class="toc-text">1.节点概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-text">2. 节点操作的原因</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E7%88%B6%E5%AD%90%E8%8A%82%E7%82%B9"><span class="toc-text">3. 父子节点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E5%85%84%E5%BC%9F%E8%8A%82%E7%82%B9"><span class="toc-text">4. 兄弟节点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E5%88%9B%E5%BB%BA%E6%B7%BB%E5%8A%A0%E8%8A%82%E7%82%B9"><span class="toc-text">5. 创建添加节点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E5%88%A0%E9%99%A4%E8%8A%82%E7%82%B9"><span class="toc-text">6. 删除节点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-%E5%A4%8D%E5%88%B6%E8%8A%82%E7%82%B9"><span class="toc-text">7. 复制节点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%85%83%E7%B4%A0"><span class="toc-text">8. 动态创建元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x3D-x3D-9-%E6%80%BB%E7%BB%93-x3D-x3D"><span class="toc-text">&#x3D;&#x3D;9.总结&#x3D;&#x3D;</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86"><span class="toc-text">事件处理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%BA%8B%E4%BB%B6%E5%9F%BA%E7%A1%80"><span class="toc-text">1. 事件基础</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E4%BA%8B%E4%BB%B6%E9%AB%98%E7%BA%A7"><span class="toc-text">2. 事件高级</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E6%B3%A8%E5%86%8C%E4%BA%8B%E4%BB%B6"><span class="toc-text">1. 注册事件</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1-%E4%BC%A0%E7%BB%9F%E6%B3%A8%E5%86%8C%E6%96%B9%E5%BC%8F"><span class="toc-text">1. 传统注册方式</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-%E6%96%B9%E6%B3%95%E7%9B%91%E5%90%AC%E6%B3%A8%E5%86%8C%E6%96%B9%E5%BC%8F"><span class="toc-text">2. 方法监听注册方式</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%88%A0%E9%99%A4%E4%BA%8B%E4%BB%B6"><span class="toc-text">2. 删除事件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-DOM%E4%BA%8B%E4%BB%B6%E6%B5%81"><span class="toc-text">3. DOM事件流</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1"><span class="toc-text">4. 事件对象</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-%E5%B8%B8%E7%94%A8%E9%BC%A0%E6%A0%87%E4%BA%8B%E4%BB%B6"><span class="toc-text">5. 常用鼠标事件</span></a></li></ol></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 By cat711</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
   if (typeof pangu === 'object') pangu.autoSpacingPage()
   else {
     getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
@@ -175,30 +653,42 @@ function panguInit () {
 
 document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="50" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && (location.pathname ==='/tags/'|| '/tags/' ==='all')){
     var parent = document.getElementById('recent-posts');
-    var child = '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><a class="magnet_link_more"  href="https://cat711.github.io/tags" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';
+    var child = '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" href="https://cat711.github.io/tags/字节青训营/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🎮 字节青训营 (1)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item" style="visibility: hidden"></div><a class="magnet_link_more"  href="https://cat711.github.io/tags" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';
     console.log('已挂载magnet')
     parent.insertAdjacentHTML("afterbegin",child)}
      </script><style>#catalog_magnet{flex-wrap: wrap;display: flex;width:100%;justify-content:space-between;padding: 10px 10px 0 10px;align-content: flex-start;}.magnet_item{flex-basis: calc(50% - 5px);background: #f2f2f2;margin-bottom: 10px;border-radius: 8px;transition: all 0.2s ease-in-out;}.magnet_item:hover{background: #b30070}.magnet_link_more{color:#555}.magnet_link{color:black}.magnet_link:hover{color:white}@media screen and (max-width: 600px) {.magnet_item {flex-basis: 100%;}}.magnet_link_context{display:flex;padding: 10px;font-size:16px;transition: all 0.2s ease-in-out;}.magnet_link_context:hover{padding: 10px 20px;}</style>
     <style></style><script data-pjax>
     function butterfly_categories_card_injector_config(){
       var parent_div_git = document.getElementById('recent-posts');
-      var item_html = '<style>li.categoryBar-list-item{width:32.3%;}.categoryBar-list{max-height: 190px;overflow:auto;}.categoryBar-list::-webkit-scrollbar{width:0!important}@media screen and (max-width: 650px){.categoryBar-list{max-height: 160px;}}</style><div class="recent-post-item" style="height:auto;width:100%;padding:0px;"><div id="categoryBar"><ul class="categoryBar-list"><li class="categoryBar-list-item" style="background:url(https://source.fomal.cc/img/default_cover_44.webp);"> <a class="categoryBar-list-link" href="categories/碎片/">碎片</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">学习笔记</span></li><li class="categoryBar-list-item" style="background:url(https://source.fomal.cc/img/default_cover_45.webp);"> <a class="categoryBar-list-link" href="categories/他山之石/">他山之石</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">碎片</span></li><li class="categoryBar-list-item" style="background:url(https://source.fomal.cc/img/default_cover_46.webp);"> <a class="categoryBar-list-link" href="categories/学习笔记/">学习笔记</a><span class="categoryBar-list-count">3</span><span class="categoryBar-list-descr">他山之石</span></li><li class="categoryBar-list-item" style="background:url(https://source.fomal.cc/img/default_cover_47.webp);"> <a class="categoryBar-list-link" href="categories/技术分享/">技术分享</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">技术分享</span></li></ul></div></div>';
+      var item_html = '<style>li.categoryBar-list-item{width:32.3%;}.categoryBar-list{max-height: 190px;overflow:auto;}.categoryBar-list::-webkit-scrollbar{width:0!important}@media screen and (max-width: 650px){.categoryBar-list{max-height: 160px;}}</style><div class="recent-post-item" style="height:auto;width:100%;padding:0px;"><div id="categoryBar"><ul class="categoryBar-list"><li class="categoryBar-list-item" style="background:url(https://source.fomal.cc/img/default_cover_44.webp);"> <a class="categoryBar-list-link" href="categories/他山之石/">他山之石</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">学习笔记</span></li><li class="categoryBar-list-item" style="background:url(https://source.fomal.cc/img/default_cover_45.webp);"> <a class="categoryBar-list-link" href="categories/碎片/">碎片</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">碎片</span></li><li class="categoryBar-list-item" style="background:url(https://source.fomal.cc/img/default_cover_46.webp);"> <a class="categoryBar-list-link" href="categories/技术分享/">技术分享</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">他山之石</span></li><li class="categoryBar-list-item" style="background:url(https://source.fomal.cc/img/default_cover_47.webp);"> <a class="categoryBar-list-link" href="categories/学习笔记/">学习笔记</a><span class="categoryBar-list-count">4</span><span class="categoryBar-list-descr">技术分享</span></li></ul></div></div>';
       console.log('已挂载butterfly_categories_card')
       parent_div_git.insertAdjacentHTML("afterbegin",item_html)
       }
     if( document.getElementById('recent-posts') && (location.pathname ==='/categories/'|| '/categories/' ==='all')){
     butterfly_categories_card_injector_config()
     }
-  </script><script data-pjax src="https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.js"></script><script data-pjax>
-  function gitcalendar_injector_config(){
-      var parent_div_git = document.getElementById('gitZone');
-      var item_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 280px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
-      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
-      console.log('已挂载gitcalendar')
-      }
-
-    if( document.getElementById('gitZone') && (location.pathname ==='/about/'|| '/about/' ==='all')){
-        gitcalendar_injector_config()
-        GitCalendarInit("https://gitcalendar.fomal.cc/api?cat711",['#d9e0df', '#c6e0dc', '#a8dcd4', '#9adcd2', '#89ded1', '#77e0d0', '#5fdecb', '#47dcc6', '#39dcc3', '#1fdabe', '#00dab9'],'cat711')
+  </script><script data-pjax>
+  function butterfly_footer_beautify_injector_config(){
+    var parent_div_git = document.getElementById('footer-wrap');
+    var item_html = '<div id="workboard"></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v6.2.0" title=""><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" data-title="主题版本Butterfly_v4.3.1" title=""><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" data-title="本站采用多线部署，主线路托管于Vercel" title=""><img src="https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&amp;logo=Vercel" alt=""/></a><a class="github-badge" target="_blank" href="https://dashboard.4everland.org/" style="margin-inline:5px" data-title="本站采用多线部署，备用线路托管于4EVERLAND" title=""><img src="https://img.shields.io/badge/Hosted-4EVERLAND-22DDDD?style=flat&amp;logo=IPFS" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title=""><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title=""><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></p>';
+    console.log('已挂载butterfly_footer_beautify')
+    parent_div_git.insertAdjacentHTML("beforeend",item_html)
     }
-  </script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body></html>
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_footer_beautify_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_footer_beautify_injector_config();
+  }
+  </script><script async src="https://npm.elemecdn.com/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.js"></script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body></html>
