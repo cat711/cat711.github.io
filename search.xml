@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title>day1</title>
+      <title>day2</title>
       <link href="/2023/01/16/day2/"/>
       <url>/2023/01/16/day2/</url>
       
@@ -52,7 +52,7 @@
       
         <tags>
             
-            <tag> 那些年错的的脚本 </tag>
+            <tag> 脚本推荐 </tag>
             
         </tags>
       
@@ -197,22 +197,44 @@
     
     
     <entry>
-      <title>charts</title>
-      <link href="/charts/index.html"/>
-      <url>/charts/index.html</url>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
-        <content type="html"><![CDATA[<script src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js"></script><!-- 文章发布时间统计图 --><div id="posts-chart" data-start="2021-01" style="border-radius: 8px; height: 300px; padding: 10px;"></div><!-- 文章标签统计图 --><div id="tags-chart" data-length="10" style="border-radius: 8px; height: 300px; padding: 10px;"></div><!-- 文章分类统计图 --><div id="categories-chart" data-parent="true" style="border-radius: 8px; height: 300px; padding: 10px;"></div>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>哈哈哈，这是关于我的页面</p><!-- GitCalendar容器 --><div id="gitZone"></div><style>/* 哔哔页面 */#bibi button {  color: #fff;  border: 0;  margin: 20px auto;  border-radius: 0.3125rem;  display: block;  padding: 0 1rem;  height: 40px;  font-weight: 500;  text-align: center;  transition: all 0.5s ease-out;  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);  background-size: 1000% 1000%;  animation: Gradient 60s linear infinite;  outline: 0;}<p>#bibi .bb-info {<br>  font-weight: 700;<br>  font-size: 22px;<br>}</p><p>#bibi .bb-card {<br>  padding: 15px;<br>  border-radius: 10px;<br>  background: rgba(255, 255, 255, 0.1);<br>  border: 1px solid #a5a5a5ee;<br>  margin-top: 20px;<br>  transition: all 0.25s;<br>  user-select: none;<br>  width: calc(48% - 7px);<br>  margin: 10px;<br>}</p><p>@media screen and (max-width: 800px) {<br>  #bibi .bb-card {<br>  width: 100%;<br>  }<br>}</p><p>#bibi .bb-card:hover {<br>  box-shadow: 0 5px 10px 8px #07111b29;<br>  transform: translateY(-3px);<br>}</p><p>#bibi .card-header {<br>  display: flex;<br>  align-items: center;<br>}</p><p>#bibi .card-header .avatar {<br>  width: 32px;<br>  height: 32px;<br>  border-radius: 50%;<br>  margin-right: 10px;<br>  border-radius: 20px;<br>  overflow: hidden;<br>}</p><p>#bibi .card-header svg {<br>  height: 20px;<br>  width: 20px;<br>  margin-left: 5px;<br>}</p><p>#bibi .card-header .card-time {<br>  font-size: 12px;<br>  text-shadow: #d9d9d9 0 0 1px, #fffffb 0 0 1px, #fffffb 0 0 2px;<br>  margin-left: 10px;<br>}</p><p>#bibi .card-content {<br>  padding: 10px 0;<br>  white-space: pre-wrap;<br>}</p><p>#bibi .card-footer {<br>  display: flex;<br>  padding-bottom: 10px;<br>}</p><p>#bibi .card-footer .card-label {<br>  border-radius: 5px;<br>  padding: 0 5px;<br>  font-weight: 550;<br>  border-radius: 5px;<br>  box-shadow: inset 0 -1px 0 rgb(27 31 35 &#x2F; 12%);<br>  font-size: 14px;<br>  user-select: none;<br>  margin-right: 10px;<br>}</p><p>div#bb_loading img{<br>  border-radius: 15px;<br>}</p><p>#bb-main {<br>  display: flex;<br>  flex-direction: row;<br>  flex-wrap: wrap;<br>  justify-content: flex-start;<br>}</p><p></style></p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/universe.css"/>
+      <url>/css/universe.css</url>
+      
+        <content type="html"><![CDATA[/* 背景宇宙星光  */#universe {    display: block;    position: fixed;    margin: 0;    padding: 0;    border: 0;    outline: 0;    left: 0;    top: 0;    width: 100%;    height: 100%;    pointer-events: none;    /* 这个是调置顶的优先级的，-1在文章页下面，背景上面，个人推荐这种 */    z-index: -1;}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>charts</title>
+      <link href="/charts/index.html"/>
+      <url>/charts/index.html</url>
+      
+        <content type="html"><![CDATA[<script src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js"></script><!-- 文章发布时间统计图 --><div id="posts-chart" data-start="2021-01" style="border-radius: 8px; height: 300px; padding: 10px;"></div><!-- 文章标签统计图 --><div id="tags-chart" data-length="10" style="border-radius: 8px; height: 300px; padding: 10px;"></div><!-- 文章分类统计图 --><div id="categories-chart" data-parent="true" style="border-radius: 8px; height: 300px; padding: 10px;"></div>]]></content>
       
     </entry>
     
@@ -252,31 +274,20 @@
     
     
     <entry>
-      <title></title>
-      <link href="/css/universe.css"/>
-      <url>/css/universe.css</url>
-      
-        <content type="html"><![CDATA[/* 背景宇宙星光  */#universe {    display: block;    position: fixed;    margin: 0;    padding: 0;    border: 0;    outline: 0;    left: 0;    top: 0;    width: 100%;    height: 100%;    pointer-events: none;    /* 这个是调置顶的优先级的，-1在文章页下面，背景上面，个人推荐这种 */    z-index: -1;}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[<p>哈哈哈，这是关于我的页面</p><!-- GitCalendar容器 --><div id="gitZone"></div><style>/* 哔哔页面 */#bibi button {  color: #fff;  border: 0;  margin: 20px auto;  border-radius: 0.3125rem;  display: block;  padding: 0 1rem;  height: 40px;  font-weight: 500;  text-align: center;  transition: all 0.5s ease-out;  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);  background-size: 1000% 1000%;  animation: Gradient 60s linear infinite;  outline: 0;}<p>#bibi .bb-info {<br>  font-weight: 700;<br>  font-size: 22px;<br>}</p><p>#bibi .bb-card {<br>  padding: 15px;<br>  border-radius: 10px;<br>  background: rgba(255, 255, 255, 0.1);<br>  border: 1px solid #a5a5a5ee;<br>  margin-top: 20px;<br>  transition: all 0.25s;<br>  user-select: none;<br>  width: calc(48% - 7px);<br>  margin: 10px;<br>}</p><p>@media screen and (max-width: 800px) {<br>  #bibi .bb-card {<br>  width: 100%;<br>  }<br>}</p><p>#bibi .bb-card:hover {<br>  box-shadow: 0 5px 10px 8px #07111b29;<br>  transform: translateY(-3px);<br>}</p><p>#bibi .card-header {<br>  display: flex;<br>  align-items: center;<br>}</p><p>#bibi .card-header .avatar {<br>  width: 32px;<br>  height: 32px;<br>  border-radius: 50%;<br>  margin-right: 10px;<br>  border-radius: 20px;<br>  overflow: hidden;<br>}</p><p>#bibi .card-header svg {<br>  height: 20px;<br>  width: 20px;<br>  margin-left: 5px;<br>}</p><p>#bibi .card-header .card-time {<br>  font-size: 12px;<br>  text-shadow: #d9d9d9 0 0 1px, #fffffb 0 0 1px, #fffffb 0 0 2px;<br>  margin-left: 10px;<br>}</p><p>#bibi .card-content {<br>  padding: 10px 0;<br>  white-space: pre-wrap;<br>}</p><p>#bibi .card-footer {<br>  display: flex;<br>  padding-bottom: 10px;<br>}</p><p>#bibi .card-footer .card-label {<br>  border-radius: 5px;<br>  padding: 0 5px;<br>  font-weight: 550;<br>  border-radius: 5px;<br>  box-shadow: inset 0 -1px 0 rgb(27 31 35 &#x2F; 12%);<br>  font-size: 14px;<br>  user-select: none;<br>  margin-right: 10px;<br>}</p><p>div#bb_loading img{<br>  border-radius: 15px;<br>}</p><p>#bb-main {<br>  display: flex;<br>  flex-direction: row;<br>  flex-wrap: wrap;<br>  justify-content: flex-start;<br>}</p><p></style></p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>友链</title>
       <link href="/link/index.html"/>
       <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -299,17 +310,6 @@
       <title>tags</title>
       <link href="/tags/index-1.html"/>
       <url>/tags/index-1.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
