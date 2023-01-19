@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>day4</title>
+      <link href="/2023/01/19/day4/"/>
+      <url>/2023/01/19/day4/</url>
+      
+        <content type="html"><![CDATA[<h2 id="TypeScript入门-｜-青训营笔记"><a href="#TypeScript入门-｜-青训营笔记" class="headerlink" title="TypeScript入门 ｜ 青训营笔记"></a>TypeScript入门 ｜ 青训营笔记</h2><p>这是我参与「第五届青训营 」笔记创作活动的第4天</p><h3 id="一、本堂课重点内容："><a href="#一、本堂课重点内容：" class="headerlink" title="一、本堂课重点内容："></a>一、本堂课重点内容：</h3><ol><li>TypeScript 历史、定义解析、工程应用</li><li>TypeScript 优势解读、练习工具</li><li>联合交叉类型</li><li>类型保护与类型守卫</li><li>Merge 函数类型实现</li><li>函数返回值类型</li></ol><h3 id="二、详细知识点介绍："><a href="#二、详细知识点介绍：" class="headerlink" title="二、详细知识点介绍："></a>二、详细知识点介绍：</h3><h4 id="1-发展历史"><a href="#1-发展历史" class="headerlink" title="1. 发展历史"></a>1. 发展历史</h4><h4 id="2-TypeScript和JavaScript"><a href="#2-TypeScript和JavaScript" class="headerlink" title="2. TypeScript和JavaScript"></a>2. TypeScript和JavaScript</h4><p>都是弱类型语言</p><p>但是JavaScript是动态类型，而TypeScript是静态类型</p><p>TypeScript的优势：</p><ul><li><p>可读性增强：基于语法解析TSDoc.ide增强</p></li><li><p>可维护性增强：在编译阶段暴露大部分错误</p></li><li><p>多人合作的大型项目中，获得更好的稳定性和开发效率</p></li><li><p>包含于兼容所以js特性，支持共存</p></li><li><p>支持渐进式引入与升级</p></li></ul><p>编辑器：Visual Studio Code</p><h4 id="3-基本语法"><a href="#3-基本语法" class="headerlink" title="3. 基本语法"></a>3. 基本语法</h4><h5 id="1-基础数据类型"><a href="#1-基础数据类型" class="headerlink" title="1. 基础数据类型"></a>1. 基础数据类型</h5><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*字符串*/</span></span><br><span class="line"><span class="keyword">const</span> <span class="attr">q</span>: <span class="built_in">string</span> <span class="string">&#x27;string&#x27;</span>;</span><br><span class="line"><span class="comment">/*数字*/</span></span><br><span class="line"><span class="keyword">const</span> <span class="attr">w</span>: <span class="built_in">number</span> = <span class="number">1</span>;</span><br><span class="line"><span class="comment">/*布尔值*/</span></span><br><span class="line"><span class="keyword">const</span> <span class="attr">e</span>: <span class="built_in">boolean</span> <span class="literal">true</span>;</span><br><span class="line"><span class="comment">/*nul1*/</span></span><br><span class="line"><span class="keyword">const</span> <span class="attr">r</span>: <span class="literal">null</span> = <span class="literal">null</span>;</span><br><span class="line"><span class="comment">/*undefined */</span></span><br><span class="line"><span class="keyword">const</span> <span class="attr">t</span>: <span class="literal">undefined</span> = <span class="literal">undefined</span>;</span><br></pre></td></tr></table></figure><h5 id="2-对象类型"><a href="#2-对象类型" class="headerlink" title="2. 对象类型"></a>2. 对象类型</h5><h5 id="3-函数类型"><a href="#3-函数类型" class="headerlink" title="3. 函数类型"></a>3. 函数类型</h5><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">x: <span class="built_in">number</span>,y: <span class="built_in">number</span></span>): <span class="built_in">number</span> &#123;</span><br><span class="line"><span class="keyword">return</span> x + y;</span><br><span class="line">&#125;    </span><br><span class="line"><span class="keyword">const</span> <span class="attr">mult</span>: <span class="function">(<span class="params">x: <span class="built_in">number</span>,y: <span class="built_in">number</span></span>) =&gt;</span> <span class="built_in">number</span> = <span class="function">(<span class="params">x, y</span>) =&gt;</span> x * y;</span><br></pre></td></tr></table></figure><h5 id="4-函数重载"><a href="#4-函数重载" class="headerlink" title="4. 函数重载"></a>4. 函数重载</h5><p>对getDate函数进行重载，timestamp为可缺省参数</p><p>不能将类型“(type: any, timestamp: any)&#x3D;&gt;string|Date”分配给类型“IGetDate”<br>不能将类型“string  |Date”分配给类型“string”。<br>不能将类型“Date”分配给类型“string”    ts(2322)</p><h5 id="5-数组类型"><a href="#5-数组类型" class="headerlink" title="5. 数组类型"></a>5. 数组类型</h5><p>用[类型+方括号]表示，有三种表示方法：</p><p>泛型表示、元祖表示、接口表示</p><h5 id="6-补充类型"><a href="#6-补充类型" class="headerlink" title="6. 补充类型"></a>6. 补充类型</h5><p>空类型：表示无赋值</p><p>任意类型，是所有类型的子类型</p><p>枚举类型：支持枚举值到枚举名的正、反向映射</p><p>泛型</p><h5 id="7-高级类型"><a href="#7-高级类型" class="headerlink" title="7. 高级类型"></a>7. 高级类型</h5><ul><li><p>联合&#x2F;交叉型</p><p>联合类型IA | IB 联合类型表示一个值可以是几种类型之一<br>交叉类型A&amp;B,多种类型叠加到一起成为一种类型，它包含了所需的所有类型的特性</p></li></ul><h5 id="8-类型保护与类型守卫"><a href="#8-类型保护与类型守卫" class="headerlink" title="8. 类型保护与类型守卫"></a>8. 类型保护与类型守卫</h5><h5 id="9-高级类型"><a href="#9-高级类型" class="headerlink" title="9. 高级类型"></a>9. 高级类型</h5><h5 id="10-函数返回值类型"><a href="#10-函数返回值类型" class="headerlink" title="10 函数返回值类型"></a>10 函数返回值类型</h5><h4 id="4-工程应用"><a href="#4-工程应用" class="headerlink" title="4.工程应用"></a>4.工程应用</h4><p>使用TSC编译</p><ul><li>安装node与npm</li><li>配置tsconfig.js文件</li><li>使用npm安装tsc</li><li>使用tsc运行编译得到js文件</li></ul><h3 id="三、实践练习例子："><a href="#三、实践练习例子：" class="headerlink" title="三、实践练习例子："></a>三、实践练习例子：</h3><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*报错：无法分配到&quot;jobId&quot;,因为它是只读属性*/</span></span><br><span class="line">bytedancer.<span class="property">jobId</span> = <span class="number">12345</span>;</span><br><span class="line"><span class="comment">/*成功：任意属性标注下可以添加任意属性*/</span></span><br><span class="line">bytedancer.<span class="property">plateform</span> <span class="string">&#x27;data&#x27;</span>;</span><br><span class="line"><span class="comment">/*报错：缺少属性&quot;name&quot;,hobby可缺省*/</span></span><br><span class="line"><span class="keyword">const</span> <span class="attr">bytedancer2</span>: <span class="title class_">IBytedancer</span> = &#123;</span><br><span class="line"><span class="attr">jobId</span>: <span class="number">89757</span>,</span><br><span class="line"><span class="attr">sex</span>: <span class="string">&#x27;woman&#x27;</span>,</span><br><span class="line"><span class="attr">age</span>: <span class="number">18</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">IHistoryBook</span> &#123;</span><br><span class="line"><span class="attr">author</span>: <span class="built_in">string</span>;</span><br><span class="line"><span class="attr">type</span>: <span class="built_in">string</span>;</span><br><span class="line"><span class="attr">range</span>: <span class="built_in">string</span>;</span><br><span class="line">&#125;    </span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">IStoryBook</span> &#123;</span><br><span class="line"><span class="attr">author</span>:<span class="built_in">string</span>;</span><br><span class="line"><span class="attr">type</span>:<span class="built_in">string</span>;</span><br><span class="line"><span class="attr">theme</span>:<span class="built_in">string</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">type</span> <span class="title class_">IBookList</span> <span class="title class_">Array</span>&lt;<span class="title class_">IHistoryBook</span> <span class="title class_">IStoryBook</span>&gt;;</span><br></pre></td></tr></table></figure><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">ISourceObj</span> &#123;</span><br><span class="line">x?: <span class="built_in">string</span>;</span><br><span class="line">y?: <span class="built_in">string</span>;</span><br><span class="line">&#125;    </span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">ITargetObj</span> &#123;</span><br><span class="line"><span class="attr">x</span>:<span class="built_in">string</span>;</span><br><span class="line"><span class="attr">y</span>:<span class="built_in">string</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">type</span> <span class="title class_">IMerge</span> = <span class="attr">sourceObj</span>:<span class="title class_">ISourceObj</span>, <span class="attr">targetObj</span>: <span class="title class_">ITargetObj</span>) =&gt; <span class="title class_">ITargetObj</span>;</span><br></pre></td></tr></table></figure><h3 id="四、课后个人总结："><a href="#四、课后个人总结：" class="headerlink" title="四、课后个人总结："></a>四、课后个人总结：</h3><ul><li>TypeScript在某些方面、语法逻辑上与JavaScript相似，要注意区分</li><li>TypeScript的语法逻辑以及代码的表示要能够认准</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 字节青训营 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>day3</title>
       <link href="/2023/01/17/day3/"/>
       <url>/2023/01/17/day3/</url>
@@ -216,17 +235,6 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[<p>哈哈哈，这是关于我的页面</p><!-- GitCalendar容器 --><div id="gitZone"></div><style>/* 哔哔页面 */#bibi button {  color: #fff;  border: 0;  margin: 20px auto;  border-radius: 0.3125rem;  display: block;  padding: 0 1rem;  height: 40px;  font-weight: 500;  text-align: center;  transition: all 0.5s ease-out;  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);  background-size: 1000% 1000%;  animation: Gradient 60s linear infinite;  outline: 0;}<p>#bibi .bb-info {<br>  font-weight: 700;<br>  font-size: 22px;<br>}</p><p>#bibi .bb-card {<br>  padding: 15px;<br>  border-radius: 10px;<br>  background: rgba(255, 255, 255, 0.1);<br>  border: 1px solid #a5a5a5ee;<br>  margin-top: 20px;<br>  transition: all 0.25s;<br>  user-select: none;<br>  width: calc(48% - 7px);<br>  margin: 10px;<br>}</p><p>@media screen and (max-width: 800px) {<br>  #bibi .bb-card {<br>  width: 100%;<br>  }<br>}</p><p>#bibi .bb-card:hover {<br>  box-shadow: 0 5px 10px 8px #07111b29;<br>  transform: translateY(-3px);<br>}</p><p>#bibi .card-header {<br>  display: flex;<br>  align-items: center;<br>}</p><p>#bibi .card-header .avatar {<br>  width: 32px;<br>  height: 32px;<br>  border-radius: 50%;<br>  margin-right: 10px;<br>  border-radius: 20px;<br>  overflow: hidden;<br>}</p><p>#bibi .card-header svg {<br>  height: 20px;<br>  width: 20px;<br>  margin-left: 5px;<br>}</p><p>#bibi .card-header .card-time {<br>  font-size: 12px;<br>  text-shadow: #d9d9d9 0 0 1px, #fffffb 0 0 1px, #fffffb 0 0 2px;<br>  margin-left: 10px;<br>}</p><p>#bibi .card-content {<br>  padding: 10px 0;<br>  white-space: pre-wrap;<br>}</p><p>#bibi .card-footer {<br>  display: flex;<br>  padding-bottom: 10px;<br>}</p><p>#bibi .card-footer .card-label {<br>  border-radius: 5px;<br>  padding: 0 5px;<br>  font-weight: 550;<br>  border-radius: 5px;<br>  box-shadow: inset 0 -1px 0 rgb(27 31 35 &#x2F; 12%);<br>  font-size: 14px;<br>  user-select: none;<br>  margin-right: 10px;<br>}</p><p>div#bb_loading img{<br>  border-radius: 15px;<br>}</p><p>#bb-main {<br>  display: flex;<br>  flex-direction: row;<br>  flex-wrap: wrap;<br>  justify-content: flex-start;<br>}</p><p></style></p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>categories</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
@@ -249,11 +257,33 @@
     
     
     <entry>
-      <title></title>
-      <link href="/css/custom.css"/>
-      <url>/css/custom.css</url>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;}#page-header {    background: transparent !important;}/* 白天模式遮罩透明 */#footer::before {    background: transparent !important;}#page-header::before {    background: transparent !important;}/* 夜间模式遮罩透明 */[data-theme="dark"] #footer::before {    background: transparent !important;}[data-theme="dark"] #page-header::before {    background: transparent !important;}/* 侧边栏个人信息卡片动态渐变色 */#aside-content>.card-widget.card-info {    background: linear-gradient(-45deg,            #e8d8b9,            #eccec5,            #a3e9eb,            #bdbdf0,            #eec1ea);    box-shadow: 0 0 5px rgb(66, 68, 68);    position: relative;    background-size: 400% 400%;    -webkit-animation: Gradient 10s ease infinite;    -moz-animation: Gradient 10s ease infinite;    animation: Gradient 10s ease infinite !important;}@-webkit-keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}@-moz-keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}@keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}/* 黑夜模式适配 */[data-theme="dark"] #aside-content>.card-widget.card-info {    background: #191919ee;}/* 个人信息Follow me按钮 */#aside-content>.card-widget.card-info>#card-info-btn {    background-color: #3eb8be;    border-radius: 8px;}/*哔哩哔哩视频适配*/.aspect-ratio {    position: relative;    width: 90%;    height: auto;    padding-bottom: 75%;    margin: 3% auto;    text-align: center;}.aspect-ratio iframe {    position: absolute;    width: 100%;    height: 86%;    left: 0;    top: 0;}]]></content>
+        <content type="html"><![CDATA[<p>哈哈哈，这是关于我的页面</p><!-- GitCalendar容器 --><div id="gitZone"></div><style>/* 哔哔页面 */#bibi button {  color: #fff;  border: 0;  margin: 20px auto;  border-radius: 0.3125rem;  display: block;  padding: 0 1rem;  height: 40px;  font-weight: 500;  text-align: center;  transition: all 0.5s ease-out;  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);  background-size: 1000% 1000%;  animation: Gradient 60s linear infinite;  outline: 0;}<p>#bibi .bb-info {<br>  font-weight: 700;<br>  font-size: 22px;<br>}</p><p>#bibi .bb-card {<br>  padding: 15px;<br>  border-radius: 10px;<br>  background: rgba(255, 255, 255, 0.1);<br>  border: 1px solid #a5a5a5ee;<br>  margin-top: 20px;<br>  transition: all 0.25s;<br>  user-select: none;<br>  width: calc(48% - 7px);<br>  margin: 10px;<br>}</p><p>@media screen and (max-width: 800px) {<br>  #bibi .bb-card {<br>  width: 100%;<br>  }<br>}</p><p>#bibi .bb-card:hover {<br>  box-shadow: 0 5px 10px 8px #07111b29;<br>  transform: translateY(-3px);<br>}</p><p>#bibi .card-header {<br>  display: flex;<br>  align-items: center;<br>}</p><p>#bibi .card-header .avatar {<br>  width: 32px;<br>  height: 32px;<br>  border-radius: 50%;<br>  margin-right: 10px;<br>  border-radius: 20px;<br>  overflow: hidden;<br>}</p><p>#bibi .card-header svg {<br>  height: 20px;<br>  width: 20px;<br>  margin-left: 5px;<br>}</p><p>#bibi .card-header .card-time {<br>  font-size: 12px;<br>  text-shadow: #d9d9d9 0 0 1px, #fffffb 0 0 1px, #fffffb 0 0 2px;<br>  margin-left: 10px;<br>}</p><p>#bibi .card-content {<br>  padding: 10px 0;<br>  white-space: pre-wrap;<br>}</p><p>#bibi .card-footer {<br>  display: flex;<br>  padding-bottom: 10px;<br>}</p><p>#bibi .card-footer .card-label {<br>  border-radius: 5px;<br>  padding: 0 5px;<br>  font-weight: 550;<br>  border-radius: 5px;<br>  box-shadow: inset 0 -1px 0 rgb(27 31 35 &#x2F; 12%);<br>  font-size: 14px;<br>  user-select: none;<br>  margin-right: 10px;<br>}</p><p>div#bb_loading img{<br>  border-radius: 15px;<br>}</p><p>#bb-main {<br>  display: flex;<br>  flex-direction: row;<br>  flex-wrap: wrap;<br>  justify-content: flex-start;<br>}</p><p></style></p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/js/universe.js"/>
+      <url>/js/universe.js</url>
+      
+        <content type="html"><![CDATA[function dark() {window.requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var n,e,i,h,t=.05,s=document.getElementById("universe"),o=!0,a="180,184,240",r="226,225,142",d="226,225,224",c=[];function f(){n=window.innerWidth,e=window.innerHeight,i=.216*n,s.setAttribute("width",n),s.setAttribute("height",e)}function u(){h.clearRect(0,0,n,e);for(var t=c.length,i=0;i<t;i++){var s=c[i];s.move(),s.fadeIn(),s.fadeOut(),s.draw()}}function y(){this.reset=function(){this.giant=m(3),this.comet=!this.giant&&!o&&m(10),this.x=l(0,n-10),this.y=l(0,e),this.r=l(1.1,2.6),this.dx=l(t,6*t)+(this.comet+1-1)*t*l(50,120)+2*t,this.dy=-l(t,6*t)-(this.comet+1-1)*t*l(50,120),this.fadingOut=null,this.fadingIn=!0,this.opacity=0,this.opacityTresh=l(.2,1-.4*(this.comet+1-1)),this.do=l(5e-4,.002)+.001*(this.comet+1-1)},this.fadeIn=function(){this.fadingIn&&(this.fadingIn=!(this.opacity>this.opacityTresh),this.opacity+=this.do)},this.fadeOut=function(){this.fadingOut&&(this.fadingOut=!(this.opacity<0),this.opacity-=this.do/2,(this.x>n||this.y<0)&&(this.fadingOut=!1,this.reset()))},this.draw=function(){if(h.beginPath(),this.giant)h.fillStyle="rgba("+a+","+this.opacity+")",h.arc(this.x,this.y,2,0,2*Math.PI,!1);else if(this.comet){h.fillStyle="rgba("+d+","+this.opacity+")",h.arc(this.x,this.y,1.5,0,2*Math.PI,!1);for(var t=0;t<30;t++)h.fillStyle="rgba("+d+","+(this.opacity-this.opacity/20*t)+")",h.rect(this.x-this.dx/4*t,this.y-this.dy/4*t-2,2,2),h.fill()}else h.fillStyle="rgba("+r+","+this.opacity+")",h.rect(this.x,this.y,this.r,this.r);h.closePath(),h.fill()},this.move=function(){this.x+=this.dx,this.y+=this.dy,!1===this.fadingOut&&this.reset(),(this.x>n-n/4||this.y<0)&&(this.fadingOut=!0)},setTimeout(function(){o=!1},50)}function m(t){return Math.floor(1e3*Math.random())+1<10*t}function l(t,i){return Math.random()*(i-t)+t}f(),window.addEventListener("resize",f,!1),function(){h=s.getContext("2d");for(var t=0;t<i;t++)c[t]=new y,c[t].reset();u()}(),function t(){document.getElementsByTagName('html')[0].getAttribute('data-theme')=='dark'&&u(),window.requestAnimationFrame(t)}()};dark()]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>电影</title>
+      <link href="/movies/index.html"/>
+      <url>/movies/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -265,6 +295,17 @@
       <url>/link/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
+      
+        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;}#page-header {    background: transparent !important;}/* 白天模式遮罩透明 */#footer::before {    background: transparent !important;}#page-header::before {    background: transparent !important;}/* 夜间模式遮罩透明 */[data-theme="dark"] #footer::before {    background: transparent !important;}[data-theme="dark"] #page-header::before {    background: transparent !important;}/* 侧边栏个人信息卡片动态渐变色 */#aside-content>.card-widget.card-info {    background: linear-gradient(-45deg,            #e8d8b9,            #eccec5,            #a3e9eb,            #bdbdf0,            #eec1ea);    box-shadow: 0 0 5px rgb(66, 68, 68);    position: relative;    background-size: 400% 400%;    -webkit-animation: Gradient 10s ease infinite;    -moz-animation: Gradient 10s ease infinite;    animation: Gradient 10s ease infinite !important;}@-webkit-keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}@-moz-keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}@keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}/* 黑夜模式适配 */[data-theme="dark"] #aside-content>.card-widget.card-info {    background: #191919ee;}/* 个人信息Follow me按钮 */#aside-content>.card-widget.card-info>#card-info-btn {    background-color: #3eb8be;    border-radius: 8px;}/*哔哩哔哩视频适配*/.aspect-ratio {    position: relative;    width: 90%;    height: auto;    padding-bottom: 75%;    margin: 3% auto;    text-align: center;}.aspect-ratio iframe {    position: absolute;    width: 100%;    height: 86%;    left: 0;    top: 0;}]]></content>
       
     </entry>
     
@@ -287,28 +328,6 @@
       <url>/music/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>电影</title>
-      <link href="/movies/index.html"/>
-      <url>/movies/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/js/universe.js"/>
-      <url>/js/universe.js</url>
-      
-        <content type="html"><![CDATA[function dark() {window.requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var n,e,i,h,t=.05,s=document.getElementById("universe"),o=!0,a="180,184,240",r="226,225,142",d="226,225,224",c=[];function f(){n=window.innerWidth,e=window.innerHeight,i=.216*n,s.setAttribute("width",n),s.setAttribute("height",e)}function u(){h.clearRect(0,0,n,e);for(var t=c.length,i=0;i<t;i++){var s=c[i];s.move(),s.fadeIn(),s.fadeOut(),s.draw()}}function y(){this.reset=function(){this.giant=m(3),this.comet=!this.giant&&!o&&m(10),this.x=l(0,n-10),this.y=l(0,e),this.r=l(1.1,2.6),this.dx=l(t,6*t)+(this.comet+1-1)*t*l(50,120)+2*t,this.dy=-l(t,6*t)-(this.comet+1-1)*t*l(50,120),this.fadingOut=null,this.fadingIn=!0,this.opacity=0,this.opacityTresh=l(.2,1-.4*(this.comet+1-1)),this.do=l(5e-4,.002)+.001*(this.comet+1-1)},this.fadeIn=function(){this.fadingIn&&(this.fadingIn=!(this.opacity>this.opacityTresh),this.opacity+=this.do)},this.fadeOut=function(){this.fadingOut&&(this.fadingOut=!(this.opacity<0),this.opacity-=this.do/2,(this.x>n||this.y<0)&&(this.fadingOut=!1,this.reset()))},this.draw=function(){if(h.beginPath(),this.giant)h.fillStyle="rgba("+a+","+this.opacity+")",h.arc(this.x,this.y,2,0,2*Math.PI,!1);else if(this.comet){h.fillStyle="rgba("+d+","+this.opacity+")",h.arc(this.x,this.y,1.5,0,2*Math.PI,!1);for(var t=0;t<30;t++)h.fillStyle="rgba("+d+","+(this.opacity-this.opacity/20*t)+")",h.rect(this.x-this.dx/4*t,this.y-this.dy/4*t-2,2,2),h.fill()}else h.fillStyle="rgba("+r+","+this.opacity+")",h.rect(this.x,this.y,this.r,this.r);h.closePath(),h.fill()},this.move=function(){this.x+=this.dx,this.y+=this.dy,!1===this.fadingOut&&this.reset(),(this.x>n-n/4||this.y<0)&&(this.fadingOut=!0)},setTimeout(function(){o=!1},50)}function m(t){return Math.floor(1e3*Math.random())+1<10*t}function l(t,i){return Math.random()*(i-t)+t}f(),window.addEventListener("resize",f,!1),function(){h=s.getContext("2d");for(var t=0;t<i;t++)c[t]=new y,c[t].reset();u()}(),function t(){document.getElementsByTagName('html')[0].getAttribute('data-theme')=='dark'&&u(),window.requestAnimationFrame(t)}()};dark()]]></content>
       
     </entry>
     
