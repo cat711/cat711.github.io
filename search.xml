@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>day6</title>
+      <link href="/2023/01/23/day6/"/>
+      <url>/2023/01/23/day6/</url>
+      
+        <content type="html"><![CDATA[<h2 id="响应式系统与React-｜-青训营笔记"><a href="#响应式系统与React-｜-青训营笔记" class="headerlink" title="响应式系统与React ｜ 青训营笔记"></a>响应式系统与React ｜ 青训营笔记</h2><p>这是我参与「第五届青训营 」笔记创作活动的第6天</p><h3 id="一、本堂课重点内容："><a href="#一、本堂课重点内容：" class="headerlink" title="一、本堂课重点内容："></a>一、本堂课重点内容：</h3><ol><li>前端应用开发历程</li><li>移动原生应用开发</li><li>结合Electron的桌面应用开发</li><li>响应式编程与转换式</li><li>React 设计与实现 - 组件化、状态归属问题及生命周期</li><li>React的实现</li><li>React状态管理库-核心思想、推荐、状态机等</li></ol><h3 id="二、详细知识点介绍："><a href="#二、详细知识点介绍：" class="headerlink" title="二、详细知识点介绍："></a>二、详细知识点介绍：</h3><h4 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h4><ul><li>HTML、CSS、JS基础</li><li>基础的数据结构&#x2F;算法知识</li><li>会使用浏览器提供的DOM API来修改DOM。更新UI</li></ul><h4 id="React的设计思路"><a href="#React的设计思路" class="headerlink" title="React的设计思路"></a>React的设计思路</h4><ol><li>状态更新 UI不会自动更新。需要手动调用DOM进行更新</li><li>欠缺基本的代码层面的封装和隔离，代码层面没有组件化</li><li>UI之间的数据依赖关系，需要手动维护，如果依赖链路长。则会遇到“Callback Hell”</li></ol><ul><li>响应式与转换式<ul><li>响应式系统<ul><li>事件-&gt;执行既定的回调-&gt;状态变更</li></ul></li><li>响应式编程<ul><li>状态更新 UI自动更新</li><li>前端代码组件化、可复用、可封装</li><li>状态之间的互相依赖关系，只需声明即可</li></ul></li><li>组件化<ul><li>组件是组件的组合&#x2F;原子组件</li><li>组件内拥有状态。外部不可见</li><li>父组件可将状态传入组件内部</li></ul></li><li>组件设计<ul><li>组件声明了状态好UI的映射</li><li>组件有Props&#x2F;State两种状态</li><li>”组件“可由其他组件拼装而成</li></ul></li></ul></li></ul><h4 id="React的实现"><a href="#React的实现" class="headerlink" title="React的实现"></a>React的实现</h4><p>问题：</p><ul><li>JSX不符合JS标准语法</li><li>返回的JSX反生改变时，如何更新DOM</li><li>State&#x2F;Props更新时，要重新触发render函数</li></ul><h4 id="React状态管理库"><a href="#React状态管理库" class="headerlink" title="React状态管理库"></a>React状态管理库</h4><p>核心思想：将状态抽离到UI外部进行统一管理</p><p>状态机：当前状态，收到外部事件，迁移到下一个状态</p><h4 id="应用级框架科普"><a href="#应用级框架科普" class="headerlink" title="应用级框架科普"></a>应用级框架科普</h4><ol><li>NEXT.JS</li></ol><p>硅谷明星创业公司Vercel的React开发框架，稳定，开发体验好，支持Unbundled Dev,swC等其同样有Serverless一键部署平台帮助开发者快速完成部署。口号是”Lct’s Make Web Fastcr”</p><ol start="2"><li>MODERN.JS</li></ol><p>字节跳动Web Infra团队研发的全栈开发框架内置了很多开箱即用的能力与最佳实践，可以减少很多调研选择工具的时间</p><ol start="3"><li>Blitz</li></ol><p>无AP1思想的全栈开发框架.开发过程中无需写API调用与CRUD逻辑，适合前后端紧密结合的小团队项目</p><h3 id="三、实践练习例子："><a href="#三、实践练习例子：" class="headerlink" title="三、实践练习例子："></a>三、实践练习例子：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function Component(props) &#123;</span><br><span class="line">//props是父组件传入的状态</span><br><span class="line">const &#123; url &#125; = props;</span><br><span class="line">this.text=&#x27;点击我&#x27;；//状态</span><br><span class="line">//返回一个“UT”</span><br><span class="line">return (&lt;div&gt;</span><br><span class="line">&lt;SubComponent props=&#123;&#123;color: &#x27;red&#x27;&#125;&#125;&gt;&lt;/SubComponent&gt;</span><br><span class="line">&lt;img src=&#123;url&#125;&gt;&lt;/img&gt;</span><br><span class="line">&lt;button&gt;text&lt;/button&gt;</span><br><span class="line">&lt;/div&gt;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; useState &#125; from react&#x27;;</span><br><span class="line">function Example() &#123;</span><br><span class="line">//Declare a new state variable,which we&#x27;ll call &quot;count&quot;</span><br><span class="line">const [count,setCount]useState(0);</span><br><span class="line">return (</span><br><span class="line">&lt;div&gt;</span><br><span class="line">&lt;p&gt;You clicked &#123;count&#125;times&lt;/p&gt;</span><br><span class="line">&lt;button onclick=&#123;()=setCount(count 1)&#125;&gt;</span><br><span class="line">Click me</span><br><span class="line">&lt;/button&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">);</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&quot;use strict&quot;;</span><br><span class="line">const Test = props =&gt; &#123;</span><br><span class="line">const &#123;</span><br><span class="line">url</span><br><span class="line">&#125; = props;</span><br><span class="line">return /*PURE*/React.createElement(&quot;div&quot;, &#123;className:&quot;root&quot;</span><br><span class="line">&#125;,/*#PURE_*/React.createElement(&quot;img&quot;,&#123;src:url</span><br><span class="line">&#125;)):</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import React,useState,useEffect from react&#x27;;</span><br><span class="line">function Example() &#123;</span><br><span class="line">const [count,setCount]useState(0)</span><br><span class="line">//Similar to componentDidMount and componentDidUpdate:</span><br><span class="line">useEffect(()=&gt; &#123;</span><br><span class="line"> //Update the document title using the browser API</span><br><span class="line">document.title You clicked $&#123;count&#125;times&#x27;;</span><br><span class="line">&#125;);</span><br><span class="line">return (</span><br><span class="line">&lt;div&gt;</span><br><span class="line">&lt;p&gt;You clicked &#123;count&#125;times&lt;/p&gt;</span><br><span class="line">&lt;button onclick=&#123;()=setCount(count 1)&#125;&gt;</span><br><span class="line">Click me</span><br><span class="line">&lt;/button&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">);</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure><h3 id="四、课后个人总结："><a href="#四、课后个人总结：" class="headerlink" title="四、课后个人总结："></a>四、课后个人总结：</h3><ul><li>React的实现是重难点</li><li>状态管理库的应用和理解</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 字节青训营 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>day5</title>
       <link href="/2023/01/20/day5/"/>
       <url>/2023/01/20/day5/</url>
@@ -254,17 +273,6 @@
     
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>关于</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
@@ -276,22 +284,11 @@
     
     
     <entry>
-      <title>电影</title>
-      <link href="/movies/index.html"/>
-      <url>/movies/index.html</url>
+      <title></title>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
       
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>charts</title>
-      <link href="/charts/index.html"/>
-      <url>/charts/index.html</url>
-      
-        <content type="html"><![CDATA[<script src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js"></script><!-- 文章发布时间统计图 --><div id="posts-chart" data-start="2021-01" style="border-radius: 8px; height: 300px; padding: 10px;"></div><!-- 文章标签统计图 --><div id="tags-chart" data-length="10" style="border-radius: 8px; height: 300px; padding: 10px;"></div><!-- 文章分类统计图 --><div id="categories-chart" data-parent="true" style="border-radius: 8px; height: 300px; padding: 10px;"></div>]]></content>
+        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;}#page-header {    background: transparent !important;}/* 白天模式遮罩透明 */#footer::before {    background: transparent !important;}#page-header::before {    background: transparent !important;}/* 夜间模式遮罩透明 */[data-theme="dark"] #footer::before {    background: transparent !important;}[data-theme="dark"] #page-header::before {    background: transparent !important;}/* 侧边栏个人信息卡片动态渐变色 */#aside-content>.card-widget.card-info {    background: linear-gradient(-45deg,            #e8d8b9,            #eccec5,            #a3e9eb,            #bdbdf0,            #eec1ea);    box-shadow: 0 0 5px rgb(66, 68, 68);    position: relative;    background-size: 400% 400%;    -webkit-animation: Gradient 10s ease infinite;    -moz-animation: Gradient 10s ease infinite;    animation: Gradient 10s ease infinite !important;}@-webkit-keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}@-moz-keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}@keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}/* 黑夜模式适配 */[data-theme="dark"] #aside-content>.card-widget.card-info {    background: #191919ee;}/* 个人信息Follow me按钮 */#aside-content>.card-widget.card-info>#card-info-btn {    background-color: #3eb8be;    border-radius: 8px;}/*哔哩哔哩视频适配*/.aspect-ratio {    position: relative;    width: 90%;    height: auto;    padding-bottom: 75%;    margin: 3% auto;    text-align: center;}.aspect-ratio iframe {    position: absolute;    width: 100%;    height: 86%;    left: 0;    top: 0;}]]></content>
       
     </entry>
     
@@ -301,6 +298,17 @@
       <title>友链</title>
       <link href="/link/index.html"/>
       <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -331,9 +339,31 @@
     
     
     <entry>
+      <title>charts</title>
+      <link href="/charts/index.html"/>
+      <url>/charts/index.html</url>
+      
+        <content type="html"><![CDATA[<script src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js"></script><!-- 文章发布时间统计图 --><div id="posts-chart" data-start="2021-01" style="border-radius: 8px; height: 300px; padding: 10px;"></div><!-- 文章标签统计图 --><div id="tags-chart" data-length="10" style="border-radius: 8px; height: 300px; padding: 10px;"></div><!-- 文章分类统计图 --><div id="categories-chart" data-parent="true" style="border-radius: 8px; height: 300px; padding: 10px;"></div>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>音乐</title>
       <link href="/music/index.html"/>
       <url>/music/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>电影</title>
+      <link href="/movies/index.html"/>
+      <url>/movies/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -347,17 +377,6 @@
       <url>/tags/index-1.html</url>
       
         <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/css/custom.css"/>
-      <url>/css/custom.css</url>
-      
-        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;}#page-header {    background: transparent !important;}/* 白天模式遮罩透明 */#footer::before {    background: transparent !important;}#page-header::before {    background: transparent !important;}/* 夜间模式遮罩透明 */[data-theme="dark"] #footer::before {    background: transparent !important;}[data-theme="dark"] #page-header::before {    background: transparent !important;}/* 侧边栏个人信息卡片动态渐变色 */#aside-content>.card-widget.card-info {    background: linear-gradient(-45deg,            #e8d8b9,            #eccec5,            #a3e9eb,            #bdbdf0,            #eec1ea);    box-shadow: 0 0 5px rgb(66, 68, 68);    position: relative;    background-size: 400% 400%;    -webkit-animation: Gradient 10s ease infinite;    -moz-animation: Gradient 10s ease infinite;    animation: Gradient 10s ease infinite !important;}@-webkit-keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}@-moz-keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}@keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}/* 黑夜模式适配 */[data-theme="dark"] #aside-content>.card-widget.card-info {    background: #191919ee;}/* 个人信息Follow me按钮 */#aside-content>.card-widget.card-info>#card-info-btn {    background-color: #3eb8be;    border-radius: 8px;}/*哔哩哔哩视频适配*/.aspect-ratio {    position: relative;    width: 90%;    height: auto;    padding-bottom: 75%;    margin: 3% auto;    text-align: center;}.aspect-ratio iframe {    position: absolute;    width: 100%;    height: 86%;    left: 0;    top: 0;}]]></content>
       
     </entry>
     
