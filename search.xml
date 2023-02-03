@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>技术拾遗</title>
+      <link href="/2023/02/03/%E6%8A%80%E6%9C%AF%E6%8B%BE%E9%81%97/"/>
+      <url>/2023/02/03/%E6%8A%80%E6%9C%AF%E6%8B%BE%E9%81%97/</url>
+      
+        <content type="html"><![CDATA[<p>1111</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术拾遗 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 项目实战——请假系统 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>前期工作</title>
       <link href="/2023/02/03/%E9%A1%B9%E7%9B%AE%E8%BF%9B%E7%A8%8B/"/>
       <url>/2023/02/03/%E9%A1%B9%E7%9B%AE%E8%BF%9B%E7%A8%8B/</url>
@@ -311,22 +336,22 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
-        <content type="html"><![CDATA[<h2 id="关于本站🚁"><a href="#关于本站🚁" class="headerlink" title="关于本站🚁"></a>关于本站🚁</h2><ul><li><strong>搭建博客初衷：</strong>作为一个软件工程的学生，一直觉得拥有自己的独立网站是一件十分酷的事情！这样就相当于拥有自己独立的空间，不用去CSDN这些网站上写博客或者用有道云笔记去记笔记。网站成为了自己的一个名片，在上面记录自己的所学、所想，留下每一次进步的脚本，何尝不是一件有趣的事情！</li><li><strong>博客内容：</strong>本人做的笔记与总结，从大佬们那里学来的知识，自己在学习好生活中发现的一些宝藏，还有就是一些自己的一些想法，后期也会将自己参与实战项目的总结、思考加入进来</li><li>博客历程：<ul><li>本站从2022年12月起开始搭建，多方搜索、尝试，终于找到了适合我的博客搭建模板，在这里感谢发布搭建教程的两位大佬，在友链中也放入了网站的地址</li><li>自搭建以来，发表了自己在学习和生活中的所学所想。日后还会继续完善</li></ul></li></ul><h2 id="关于我🤗"><a href="#关于我🤗" class="headerlink" title="关于我🤗"></a>关于我🤗</h2><h2 id="基本资料📃"><a href="#基本资料📃" class="headerlink" title="基本资料📃"></a>基本资料📃</h2><ul><li><strong>昵称：</strong>cat711</li><li><strong>性别：</strong>♀</li><li><strong>生日：</strong>2004.xx.xx</li><li><strong>身份：</strong>太原理工大学软件工程专业在读本科生</li><li><strong>邮箱：</strong><a href="2724891564@qq.com">2724891564@qq.com</a> </li><li>技能：<ul><li>计算机💻：<ul><li>C语言基础(🌟🌟🌟)</li><li>前端三件套(🌟🌟🌟)</li><li>数据结构与算法(🌟🌟🌟)</li><li>408四大天书(🌟)</li><li>pyth(🌟🌟🌟)</li></ul></li></ul></li></ul><h2 id="技术栈-amp-框架🧪"><a href="#技术栈-amp-框架🧪" class="headerlink" title="技术栈&amp;框架🧪"></a>技术栈&amp;框架🧪</h2><ul><li>博客框架：<a href="https://github.com/hexojs/hexo">Hexo 6.3.0</a></li><li>主题：<a href="https://butterfly.js.org/">Butterfly 4.3.1</a></li><li>源码仓库：<a href="https://github.com/">Github</a></li><li>托管与部署：本网站采用多线部署，包括<a href="https://vercel.com/">Vercel</a> + <a href="https://app.netlify.com/">Netlify</a> + <a href="https://www.cloudflare.com/zh-cn/">Cloudflare</a> + <a href="https://railway.app/">Railway</a> + <a href="https://app.fleek.co/">Fleek</a> + <a href="https://render.com/">Render</a> + <a href="https://pages.github.com/">Github Pages</a> + 私服等</li><li>评论系统：<a href="https://twikoo.js.org/">Twikoo</a>系统 + <a href="https://vercel.com/">Vercel</a>部署 + <a href="https://www.mongodb.com/">MongoDB</a>提供存储服务</li><li>图床：<a href="https://app.netlify.com/">Netlify</a>部署 + <a href="https://bitiful.dogecast.com/buckets">缤纷云Bucket</a> + <a href="https://skypro.acozycotage.net/#/">自建LightPicture</a> + <a href="https://www.netdun.net/">网盾国内对象存储</a> + <a href="https://tuchuang.voooe.cn/">SKY CHART BED</a></li><li>CDN：<a href="https://tianli-blog.club/jsd/">TianliCDN</a> + <a href="http://www.staticfile.org/">Staticfile CDN</a> + <a href="https://cdn.baomitu.com/">75CDN</a> + <a href="https://cdn.bytedance.com/">字节跳动静态资源公共库</a> + <a href="https://npm.elemecdn.com/">elemecdn</a> 等</li><li>图片压缩：<a href="https://github.com/meowtec/Imagine">Imagine</a>有损压缩技术 + <a href="https://imagestool.com/zh_CN/index.html">imagesTool</a>转化图片格式为webp</li><li>字体压缩: 基于Python的fonttools子集化压缩 + <a href="https://cloudconvert.com/">CloudConvert</a>压缩为woff2格式</li><li>静态资源压缩: <a href="https://github.com/gulpjs/gulp">gulp</a> + <a href="https://github.com/olback/es6-css-minify/tree/3.0">JS &amp; CSS Minifier (Minify)</a></li><li>自动部署：<a href="https://git-scm.com/">Git 钩子</a> + <a href="https://blog.csdn.net/weixin_43669978/article/details/122392448">Github Action</a></li><li>SEO优化：<a href="https://www.google.com/">谷歌</a> + <a href="https://www.bing.com/">必应</a> + <a href="https://www.baidu.com/">百度</a></li><li>音乐平台：<a href="https://github.com/MoePlayer/hexo-tag-aplayer">hexo-tag-aplayer</a> + <a href="https://github.com/metowolf/MetingJS">MetingJS</a></li><li>哔哔：<a href="https://github.com/kkfive/kkapi-open">Ispeak</a> + <a href="https://www.mongodb.com/">MongoDB</a>提供存储服务</li><li>流量监控：<a href="https://v6.51.la/">51la</a> + <a href="https://perf.51.la/">灵雀监控</a></li><li>友链朋友圈：<a href="https://github.com/Rock-Candy-Tea/hexo-circle-of-friends">hexo-circle-of-friends</a>爬虫 + <a href="https://www.sqlite.org/">SQLite</a>提供存储服务 + <a href="https://vercel.com/">Vercel</a>部署</li><li>微博热搜：<a href="https://github.com/Eurkon/weibo-top-api">weibo-top-api</a>爬虫 + <a href="https://vercel.com/">Vercel</a>部署</li><li>博客统计：<a href="https://aoaoao.info/321.html">不蒜子</a> + <a href="https://tongji.baidu.com/">百度统计</a> + <a href="https://github.com/Eurkon/baidu-tongji-api">baidu-tongji-api</a>爬虫 + <a href="https://vercel.com/">Vercel</a>部署</li><li>异步加载与缓存加速技术：<a href="https://github.com/defunkt/jquery-pjax">Pjax</a></li><li>弹窗框架支持：<a href="https://github.com/ElemeFE/element">Element</a> + <a href="https://github.com/vuejs/vue">Vue</a></li><li>开发语言：HTML5 + CSS3 + JavaScript + Pug + YML等</li><li>线路优化：利用<a href="https://developer.chrome.com/docs/workbox/service-worker-overview/">Service Worker</a>劫持主域链接至缤纷云Bucket，从而实现将请求分流至国内线路，以提高访问速度(参考LYX大佬的方案)</li><li>版权声明：详见<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></li></ul><!-- GitCalendar容器 --><div id="gitZone"></div><style>/* 哔哔页面 */#bibi button {  color: #fff;  border: 0;  margin: 20px auto;  border-radius: 0.3125rem;  display: block;  padding: 0 1rem;  height: 40px;  font-weight: 500;  text-align: center;  transition: all 0.5s ease-out;  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);  background-size: 1000% 1000%;  animation: Gradient 60s linear infinite;  outline: 0;}<p>#bibi .bb-info {<br>  font-weight: 700;<br>  font-size: 22px;<br>}</p><p>#bibi .bb-card {<br>  padding: 15px;<br>  border-radius: 10px;<br>  background: rgba(255, 255, 255, 0.1);<br>  border: 1px solid #a5a5a5ee;<br>  margin-top: 20px;<br>  transition: all 0.25s;<br>  user-select: none;<br>  width: calc(48% - 7px);<br>  margin: 10px;<br>}</p><p>@media screen and (max-width: 800px) {<br>  #bibi .bb-card {<br>  width: 100%;<br>  }<br>}</p><p>#bibi .bb-card:hover {<br>  box-shadow: 0 5px 10px 8px #07111b29;<br>  transform: translateY(-3px);<br>}</p><p>#bibi .card-header {<br>  display: flex;<br>  align-items: center;<br>}</p><p>#bibi .card-header .avatar {<br>  width: 32px;<br>  height: 32px;<br>  border-radius: 50%;<br>  margin-right: 10px;<br>  border-radius: 20px;<br>  overflow: hidden;<br>}</p><p>#bibi .card-header svg {<br>  height: 20px;<br>  width: 20px;<br>  margin-left: 5px;<br>}</p><p>#bibi .card-header .card-time {<br>  font-size: 12px;<br>  text-shadow: #d9d9d9 0 0 1px, #fffffb 0 0 1px, #fffffb 0 0 2px;<br>  margin-left: 10px;<br>}</p><p>#bibi .card-content {<br>  padding: 10px 0;<br>  white-space: pre-wrap;<br>}</p><p>#bibi .card-footer {<br>  display: flex;<br>  padding-bottom: 10px;<br>}</p><p>#bibi .card-footer .card-label {<br>  border-radius: 5px;<br>  padding: 0 5px;<br>  font-weight: 550;<br>  border-radius: 5px;<br>  box-shadow: inset 0 -1px 0 rgb(27 31 35 &#x2F; 12%);<br>  font-size: 14px;<br>  user-select: none;<br>  margin-right: 10px;<br>}</p><p>div#bb_loading img{<br>  border-radius: 15px;<br>}</p><p>#bb-main {<br>  display: flex;<br>  flex-direction: row;<br>  flex-wrap: wrap;<br>  justify-content: flex-start;<br>}</p><p></style></p>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="关于本站🚁"><a href="#关于本站🚁" class="headerlink" title="关于本站🚁"></a>关于本站🚁</h2><ul><li><strong>搭建博客初衷：</strong>作为一个软件工程的学生，一直觉得拥有自己的独立网站是一件十分酷的事情！这样就相当于拥有自己独立的空间，不用去CSDN这些网站上写博客或者用有道云笔记去记笔记。网站成为了自己的一个名片，在上面记录自己的所学、所想，留下每一次进步的脚本，何尝不是一件有趣的事情！</li><li><strong>博客内容：</strong>本人做的笔记与总结，从大佬们那里学来的知识，自己在学习好生活中发现的一些宝藏，还有就是一些自己的一些想法，后期也会将自己参与实战项目的总结、思考加入进来</li><li>博客历程：<ul><li>本站从2022年12月起开始搭建，多方搜索、尝试，终于找到了适合我的博客搭建模板，在这里感谢发布搭建教程的两位大佬，在友链中也放入了网站的地址</li><li>自搭建以来，发表了自己在学习和生活中的所学所想。日后还会继续完善</li></ul></li></ul><h2 id="关于我🤗"><a href="#关于我🤗" class="headerlink" title="关于我🤗"></a>关于我🤗</h2><h2 id="基本资料📃"><a href="#基本资料📃" class="headerlink" title="基本资料📃"></a>基本资料📃</h2><ul><li><strong>昵称：</strong>cat711</li><li><strong>性别：</strong>♀</li><li><strong>生日：</strong>2004.xx.xx</li><li><strong>身份：</strong>太原理工大学软件工程专业在读本科生</li><li><strong>邮箱：</strong><a href="2724891564@qq.com">2724891564@qq.com</a> </li><li>技能：<ul><li>计算机💻：<ul><li>C语言基础(🌟🌟🌟)</li><li>前端三件套(🌟🌟🌟)</li><li>数据结构与算法(🌟🌟🌟)</li><li>408四大天书(🌟)</li><li>pyth(🌟🌟🌟)</li></ul></li></ul></li></ul><h2 id="技术栈-amp-框架🧪"><a href="#技术栈-amp-框架🧪" class="headerlink" title="技术栈&amp;框架🧪"></a>技术栈&amp;框架🧪</h2><ul><li>博客框架：<a href="https://github.com/hexojs/hexo">Hexo 6.3.0</a></li><li>主题：<a href="https://butterfly.js.org/">Butterfly 4.3.1</a></li><li>源码仓库：<a href="https://github.com/">Github</a></li><li>托管与部署：本网站采用多线部署，包括<a href="https://vercel.com/">Vercel</a> + <a href="https://app.netlify.com/">Netlify</a> + <a href="https://www.cloudflare.com/zh-cn/">Cloudflare</a> + <a href="https://railway.app/">Railway</a> + <a href="https://app.fleek.co/">Fleek</a> + <a href="https://render.com/">Render</a> + <a href="https://pages.github.com/">Github Pages</a> + 私服等</li><li>评论系统：<a href="https://twikoo.js.org/">Twikoo</a>系统 + <a href="https://vercel.com/">Vercel</a>部署 + <a href="https://www.mongodb.com/">MongoDB</a>提供存储服务</li><li>图床：<a href="https://app.netlify.com/">Netlify</a>部署 + <a href="https://bitiful.dogecast.com/buckets">缤纷云Bucket</a> + <a href="https://skypro.acozycotage.net/#/">自建LightPicture</a> + <a href="https://www.netdun.net/">网盾国内对象存储</a> + <a href="https://tuchuang.voooe.cn/">SKY CHART BED</a></li><li>CDN：<a href="https://tianli-blog.club/jsd/">TianliCDN</a> + <a href="http://www.staticfile.org/">Staticfile CDN</a> + <a href="https://cdn.baomitu.com/">75CDN</a> + <a href="https://cdn.bytedance.com/">字节跳动静态资源公共库</a> + <a href="https://npm.elemecdn.com/">elemecdn</a> 等</li><li>图片压缩：<a href="https://github.com/meowtec/Imagine">Imagine</a>有损压缩技术 + <a href="https://imagestool.com/zh_CN/index.html">imagesTool</a>转化图片格式为webp</li><li>字体压缩: 基于Python的fonttools子集化压缩 + <a href="https://cloudconvert.com/">CloudConvert</a>压缩为woff2格式</li><li>静态资源压缩: <a href="https://github.com/gulpjs/gulp">gulp</a> + <a href="https://github.com/olback/es6-css-minify/tree/3.0">JS &amp; CSS Minifier (Minify)</a></li><li>自动部署：<a href="https://git-scm.com/">Git 钩子</a> + <a href="https://blog.csdn.net/weixin_43669978/article/details/122392448">Github Action</a></li><li>SEO优化：<a href="https://www.google.com/">谷歌</a> + <a href="https://www.bing.com/">必应</a> + <a href="https://www.baidu.com/">百度</a></li><li>音乐平台：<a href="https://github.com/MoePlayer/hexo-tag-aplayer">hexo-tag-aplayer</a> + <a href="https://github.com/metowolf/MetingJS">MetingJS</a></li><li>哔哔：<a href="https://github.com/kkfive/kkapi-open">Ispeak</a> + <a href="https://www.mongodb.com/">MongoDB</a>提供存储服务</li><li>流量监控：<a href="https://v6.51.la/">51la</a> + <a href="https://perf.51.la/">灵雀监控</a></li><li>友链朋友圈：<a href="https://github.com/Rock-Candy-Tea/hexo-circle-of-friends">hexo-circle-of-friends</a>爬虫 + <a href="https://www.sqlite.org/">SQLite</a>提供存储服务 + <a href="https://vercel.com/">Vercel</a>部署</li><li>微博热搜：<a href="https://github.com/Eurkon/weibo-top-api">weibo-top-api</a>爬虫 + <a href="https://vercel.com/">Vercel</a>部署</li><li>博客统计：<a href="https://aoaoao.info/321.html">不蒜子</a> + <a href="https://tongji.baidu.com/">百度统计</a> + <a href="https://github.com/Eurkon/baidu-tongji-api">baidu-tongji-api</a>爬虫 + <a href="https://vercel.com/">Vercel</a>部署</li><li>异步加载与缓存加速技术：<a href="https://github.com/defunkt/jquery-pjax">Pjax</a></li><li>弹窗框架支持：<a href="https://github.com/ElemeFE/element">Element</a> + <a href="https://github.com/vuejs/vue">Vue</a></li><li>开发语言：HTML5 + CSS3 + JavaScript + Pug + YML等</li><li>线路优化：利用<a href="https://developer.chrome.com/docs/workbox/service-worker-overview/">Service Worker</a>劫持主域链接至缤纷云Bucket，从而实现将请求分流至国内线路，以提高访问速度(参考LYX大佬的方案)</li><li>版权声明：详见<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></li></ul><!-- GitCalendar容器 --><div id="gitZone"></div><style>/* 哔哔页面 */#bibi button {  color: #fff;  border: 0;  margin: 20px auto;  border-radius: 0.3125rem;  display: block;  padding: 0 1rem;  height: 40px;  font-weight: 500;  text-align: center;  transition: all 0.5s ease-out;  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);  background-size: 1000% 1000%;  animation: Gradient 60s linear infinite;  outline: 0;}<p>#bibi .bb-info {<br>  font-weight: 700;<br>  font-size: 22px;<br>}</p><p>#bibi .bb-card {<br>  padding: 15px;<br>  border-radius: 10px;<br>  background: rgba(255, 255, 255, 0.1);<br>  border: 1px solid #a5a5a5ee;<br>  margin-top: 20px;<br>  transition: all 0.25s;<br>  user-select: none;<br>  width: calc(48% - 7px);<br>  margin: 10px;<br>}</p><p>@media screen and (max-width: 800px) {<br>  #bibi .bb-card {<br>  width: 100%;<br>  }<br>}</p><p>#bibi .bb-card:hover {<br>  box-shadow: 0 5px 10px 8px #07111b29;<br>  transform: translateY(-3px);<br>}</p><p>#bibi .card-header {<br>  display: flex;<br>  align-items: center;<br>}</p><p>#bibi .card-header .avatar {<br>  width: 32px;<br>  height: 32px;<br>  border-radius: 50%;<br>  margin-right: 10px;<br>  border-radius: 20px;<br>  overflow: hidden;<br>}</p><p>#bibi .card-header svg {<br>  height: 20px;<br>  width: 20px;<br>  margin-left: 5px;<br>}</p><p>#bibi .card-header .card-time {<br>  font-size: 12px;<br>  text-shadow: #d9d9d9 0 0 1px, #fffffb 0 0 1px, #fffffb 0 0 2px;<br>  margin-left: 10px;<br>}</p><p>#bibi .card-content {<br>  padding: 10px 0;<br>  white-space: pre-wrap;<br>}</p><p>#bibi .card-footer {<br>  display: flex;<br>  padding-bottom: 10px;<br>}</p><p>#bibi .card-footer .card-label {<br>  border-radius: 5px;<br>  padding: 0 5px;<br>  font-weight: 550;<br>  border-radius: 5px;<br>  box-shadow: inset 0 -1px 0 rgb(27 31 35 &#x2F; 12%);<br>  font-size: 14px;<br>  user-select: none;<br>  margin-right: 10px;<br>}</p><p>div#bb_loading img{<br>  border-radius: 15px;<br>}</p><p>#bb-main {<br>  display: flex;<br>  flex-direction: row;<br>  flex-wrap: wrap;<br>  justify-content: flex-start;<br>}</p><p></style></p>]]></content>
       
     </entry>
     
@@ -345,17 +370,6 @@
     
     <entry>
       <title></title>
-      <link href="/css/universe.css"/>
-      <url>/css/universe.css</url>
-      
-        <content type="html"><![CDATA[/* 背景宇宙星光  */#universe {    display: block;    position: fixed;    margin: 0;    padding: 0;    border: 0;    outline: 0;    left: 0;    top: 0;    width: 100%;    height: 100%;    pointer-events: none;    /* 这个是调置顶的优先级的，-1在文章页下面，背景上面，个人推荐这种 */    z-index: -1;}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/css/custom.css"/>
       <url>/css/custom.css</url>
       
@@ -367,10 +381,54 @@
     
     <entry>
       <title></title>
+      <link href="/css/universe.css"/>
+      <url>/css/universe.css</url>
+      
+        <content type="html"><![CDATA[/* 背景宇宙星光  */#universe {    display: block;    position: fixed;    margin: 0;    padding: 0;    border: 0;    outline: 0;    left: 0;    top: 0;    width: 100%;    height: 100%;    pointer-events: none;    /* 这个是调置顶的优先级的，-1在文章页下面，背景上面，个人推荐这种 */    z-index: -1;}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tags</title>
+      <link href="/tags/index-1.html"/>
+      <url>/tags/index-1.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>音乐</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
       <link href="/js/universe.js"/>
       <url>/js/universe.js</url>
       
         <content type="html"><![CDATA[function dark() {window.requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var n,e,i,h,t=.05,s=document.getElementById("universe"),o=!0,a="180,184,240",r="226,225,142",d="226,225,224",c=[];function f(){n=window.innerWidth,e=window.innerHeight,i=.216*n,s.setAttribute("width",n),s.setAttribute("height",e)}function u(){h.clearRect(0,0,n,e);for(var t=c.length,i=0;i<t;i++){var s=c[i];s.move(),s.fadeIn(),s.fadeOut(),s.draw()}}function y(){this.reset=function(){this.giant=m(3),this.comet=!this.giant&&!o&&m(10),this.x=l(0,n-10),this.y=l(0,e),this.r=l(1.1,2.6),this.dx=l(t,6*t)+(this.comet+1-1)*t*l(50,120)+2*t,this.dy=-l(t,6*t)-(this.comet+1-1)*t*l(50,120),this.fadingOut=null,this.fadingIn=!0,this.opacity=0,this.opacityTresh=l(.2,1-.4*(this.comet+1-1)),this.do=l(5e-4,.002)+.001*(this.comet+1-1)},this.fadeIn=function(){this.fadingIn&&(this.fadingIn=!(this.opacity>this.opacityTresh),this.opacity+=this.do)},this.fadeOut=function(){this.fadingOut&&(this.fadingOut=!(this.opacity<0),this.opacity-=this.do/2,(this.x>n||this.y<0)&&(this.fadingOut=!1,this.reset()))},this.draw=function(){if(h.beginPath(),this.giant)h.fillStyle="rgba("+a+","+this.opacity+")",h.arc(this.x,this.y,2,0,2*Math.PI,!1);else if(this.comet){h.fillStyle="rgba("+d+","+this.opacity+")",h.arc(this.x,this.y,1.5,0,2*Math.PI,!1);for(var t=0;t<30;t++)h.fillStyle="rgba("+d+","+(this.opacity-this.opacity/20*t)+")",h.rect(this.x-this.dx/4*t,this.y-this.dy/4*t-2,2,2),h.fill()}else h.fillStyle="rgba("+r+","+this.opacity+")",h.rect(this.x,this.y,this.r,this.r);h.closePath(),h.fill()},this.move=function(){this.x+=this.dx,this.y+=this.dy,!1===this.fadingOut&&this.reset(),(this.x>n-n/4||this.y<0)&&(this.fadingOut=!0)},setTimeout(function(){o=!1},50)}function m(t){return Math.floor(1e3*Math.random())+1<10*t}function l(t,i){return Math.random()*(i-t)+t}f(),window.addEventListener("resize",f,!1),function(){h=s.getContext("2d");for(var t=0;t<i;t++)c[t]=new y,c[t].reset();u()}(),function t(){document.getElementsByTagName('html')[0].getAttribute('data-theme')=='dark'&&u(),window.requestAnimationFrame(t)}()};dark()]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -391,39 +449,6 @@
       <title>电影</title>
       <link href="/movies/index.html"/>
       <url>/movies/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>tags</title>
-      <link href="/tags/index-1.html"/>
-      <url>/tags/index-1.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>音乐</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
