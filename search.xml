@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>准备工作</title>
+      <title>前期工作</title>
       <link href="/2023/02/03/%E9%A1%B9%E7%9B%AE%E8%BF%9B%E7%A8%8B/"/>
       <url>/2023/02/03/%E9%A1%B9%E7%9B%AE%E8%BF%9B%E7%A8%8B/</url>
       
-        <content type="html"><![CDATA[<p>111</p>]]></content>
+        <content type="html"><![CDATA[<p>从2023年1月26日开始，正式开始项目实战，选定项目：请假系统</p><p>在选定了项目之后，开始思考完成项目的流程，包括从任务分配到具体怎样实现功能，从搭建页面到对接完成等等各方面进行了思考，发现项目实践和平时学习技术还是有着很大的差别。</p><h3 id="1-分析需求"><a href="#1-分析需求" class="headerlink" title="1. 分析需求"></a>1. 分析需求</h3><p>请假系统已经给出了具体的功能和要求，首先要对这些信息进行划分，制作思维导图可以更好、更细节的呈现出来</p><p> <a href="C:\Users\www\Desktop\请假系统\功能描述.mm.xmind">功能描述.mm.xmind</a> </p><p>这是我制作的思维导图，里面将不同页面需要实现的功能进行了分类，并且将需要注意的问题和实现的难点做了批注(虽然做了分析，但在实际操作时还是有更多之前没有考虑到的问题出现)</p><h3 id="2-补足技术"><a href="#2-补足技术" class="headerlink" title="2. 补足技术"></a>2. 补足技术</h3><p>在进行项目实战时，还没有完全掌握前后端对接方面的问题，又怕实际项目中和练习情况不同，于是查找了相关项目实现对接的代码，再结合讲解和学习文档，补足了对接技术</p><h3 id="3-搭框架"><a href="#3-搭框架" class="headerlink" title="3. 搭框架"></a>3. 搭框架</h3><p>设计的小伙伴们给出了大致设计草图之后，分工完成页面的制作，从页面大小到布局定位，都要自己考量，也要保证如果改动不用做“大手术”，首先用HTML和CSS基本搭建静态页面，在用JS实现点击，跳转等页面功能的完善，这是在项目正式着手之后，最简单的一步</p><h3 id="4-搜索相关的“零件”"><a href="#4-搜索相关的“零件”" class="headerlink" title="4.  搜索相关的“零件”"></a>4.  搜索相关的“零件”</h3><p>分析了功能实现及难点，并且搭建了简单的页面，开始实现具体的功能，比如表单验证时间是否符合请假的要求、假条是否填写完整、怎样可以将写好的假条在记录页面动态的显示出来等等，开始调用自己之前学过的知识，很多有遗忘的从网上搜索，并标记(相关的技术，之后还会写博客进行总结)。</p><p>项目之后的进度和完成情况，之后还会继续在本标签下总结</p>]]></content>
       
       
       
@@ -333,11 +333,11 @@
     
     
     <entry>
-      <title></title>
-      <link href="/css/custom.css"/>
-      <url>/css/custom.css</url>
+      <title>charts</title>
+      <link href="/charts/index.html"/>
+      <url>/charts/index.html</url>
       
-        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;}#page-header {    background: transparent !important;}/* 白天模式遮罩透明 */#footer::before {    background: transparent !important;}#page-header::before {    background: transparent !important;}/* 夜间模式遮罩透明 */[data-theme="dark"] #footer::before {    background: transparent !important;}[data-theme="dark"] #page-header::before {    background: transparent !important;}/* 侧边栏个人信息卡片动态渐变色 */#aside-content>.card-widget.card-info {    background: linear-gradient(-45deg,            #e8d8b9,            #eccec5,            #a3e9eb,            #bdbdf0,            #eec1ea);    box-shadow: 0 0 5px rgb(66, 68, 68);    position: relative;    background-size: 400% 400%;    -webkit-animation: Gradient 10s ease infinite;    -moz-animation: Gradient 10s ease infinite;    animation: Gradient 10s ease infinite !important;}@-webkit-keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}@-moz-keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}@keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}/* 黑夜模式适配 */[data-theme="dark"] #aside-content>.card-widget.card-info {    background: #191919ee;}/* 个人信息Follow me按钮 */#aside-content>.card-widget.card-info>#card-info-btn {    background-color: #3eb8be;    border-radius: 8px;}/*哔哩哔哩视频适配*/.aspect-ratio {    position: relative;    width: 90%;    height: auto;    padding-bottom: 75%;    margin: 3% auto;    text-align: center;}.aspect-ratio iframe {    position: absolute;    width: 100%;    height: 86%;    left: 0;    top: 0;}]]></content>
+        <content type="html"><![CDATA[<script src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js"></script><!-- 文章发布时间统计图 --><div id="posts-chart" data-start="2021-01" style="border-radius: 8px; height: 300px; padding: 10px;"></div><!-- 文章标签统计图 --><div id="tags-chart" data-length="10" style="border-radius: 8px; height: 300px; padding: 10px;"></div><!-- 文章分类统计图 --><div id="categories-chart" data-parent="true" style="border-radius: 8px; height: 300px; padding: 10px;"></div>]]></content>
       
     </entry>
     
@@ -349,6 +349,17 @@
       <url>/css/universe.css</url>
       
         <content type="html"><![CDATA[/* 背景宇宙星光  */#universe {    display: block;    position: fixed;    margin: 0;    padding: 0;    border: 0;    outline: 0;    left: 0;    top: 0;    width: 100%;    height: 100%;    pointer-events: none;    /* 这个是调置顶的优先级的，-1在文章页下面，背景上面，个人推荐这种 */    z-index: -1;}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
+      
+        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;}#page-header {    background: transparent !important;}/* 白天模式遮罩透明 */#footer::before {    background: transparent !important;}#page-header::before {    background: transparent !important;}/* 夜间模式遮罩透明 */[data-theme="dark"] #footer::before {    background: transparent !important;}[data-theme="dark"] #page-header::before {    background: transparent !important;}/* 侧边栏个人信息卡片动态渐变色 */#aside-content>.card-widget.card-info {    background: linear-gradient(-45deg,            #e8d8b9,            #eccec5,            #a3e9eb,            #bdbdf0,            #eec1ea);    box-shadow: 0 0 5px rgb(66, 68, 68);    position: relative;    background-size: 400% 400%;    -webkit-animation: Gradient 10s ease infinite;    -moz-animation: Gradient 10s ease infinite;    animation: Gradient 10s ease infinite !important;}@-webkit-keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}@-moz-keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}@keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}/* 黑夜模式适配 */[data-theme="dark"] #aside-content>.card-widget.card-info {    background: #191919ee;}/* 个人信息Follow me按钮 */#aside-content>.card-widget.card-info>#card-info-btn {    background-color: #3eb8be;    border-radius: 8px;}/*哔哩哔哩视频适配*/.aspect-ratio {    position: relative;    width: 90%;    height: auto;    padding-bottom: 75%;    margin: 3% auto;    text-align: center;}.aspect-ratio iframe {    position: absolute;    width: 100%;    height: 86%;    left: 0;    top: 0;}]]></content>
       
     </entry>
     
@@ -377,20 +388,9 @@
     
     
     <entry>
-      <title>charts</title>
-      <link href="/charts/index.html"/>
-      <url>/charts/index.html</url>
-      
-        <content type="html"><![CDATA[<script src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js"></script><!-- 文章发布时间统计图 --><div id="posts-chart" data-start="2021-01" style="border-radius: 8px; height: 300px; padding: 10px;"></div><!-- 文章标签统计图 --><div id="tags-chart" data-length="10" style="border-radius: 8px; height: 300px; padding: 10px;"></div><!-- 文章分类统计图 --><div id="categories-chart" data-parent="true" style="border-radius: 8px; height: 300px; padding: 10px;"></div>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>音乐</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
+      <title>电影</title>
+      <link href="/movies/index.html"/>
+      <url>/movies/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -421,9 +421,9 @@
     
     
     <entry>
-      <title>电影</title>
-      <link href="/movies/index.html"/>
-      <url>/movies/index.html</url>
+      <title>音乐</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
